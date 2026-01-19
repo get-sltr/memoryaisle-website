@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verified - MemoryAisle</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+        }
+        
+        .icon { font-size: 80px; margin-bottom: 20px; }
+        h1 { font-size: 32px; color: #D4A574; margin-bottom: 15px; }
+        p { font-size: 18px; color: #666; margin-bottom: 30px; }
+        
+        .button {
+            background: #000;
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">✅</div>
+        <h1>Email Verified!</h1>
+        <p>Your email has been verified. Return to the MemoryAisle app to continue.</p>
+        <a href="memoryaisle://" class="button">Open MemoryAisle</a>
+    </div>
+    
+    <script>
+        const params = new URLSearchParams(window.location.hash.substring(1));
+        const accessToken = params.get('access_token');
+        const type = params.get('type');
+        
+        if (accessToken && type === 'signup') {
+            setTimeout(function() {
+                window.location.href = 'memoryaisle://auth/callback' + window.location.hash;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

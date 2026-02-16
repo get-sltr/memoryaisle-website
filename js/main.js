@@ -140,6 +140,20 @@ document.addEventListener('DOMContentLoaded', function() {
   yearElements.forEach(el => {
     el.textContent = new Date().getFullYear();
   });
+
+  // Waitlist form
+  const waitlistForm = document.getElementById('waitlist-form');
+  if (waitlistForm) {
+    waitlistForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      const waitlist = JSON.parse(localStorage.getItem('ma_waitlist') || '[]');
+      waitlist.push({ email: email, date: new Date().toISOString() });
+      localStorage.setItem('ma_waitlist', JSON.stringify(waitlist));
+      this.style.display = 'none';
+      document.getElementById('waitlist-success').style.display = 'block';
+    });
+  }
 });
 
 // Prevent flash of unstyled content

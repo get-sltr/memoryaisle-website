@@ -1628,6 +1628,48 @@ body.monthly-pricing .toggle-label[data-period="monthly"] {
   }
 }
 
+/* ===== Waitlist Form ===== */
+.waitlist-form {
+  max-width: 500px;
+  margin: 2rem auto 0;
+}
+
+.waitlist-input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.waitlist-input {
+  flex: 1;
+  padding: 14px 20px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.waitlist-input:focus {
+  border-color: var(--gold-base);
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.2);
+}
+
+.waitlist-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  text-align: center;
+}
+
+.waitlist-success p {
+  font-size: 18px;
+  color: var(--gold-dark);
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
 /* ===== Responsive Additions ===== */
 @media (max-width: 768px) {
   .billing-toggle {
@@ -1646,5 +1688,9 @@ body.monthly-pricing .toggle-label[data-period="monthly"] {
 
   .legal-section {
     padding: 120px 0 60px;
+  }
+
+  .waitlist-input-group {
+    flex-direction: column;
   }
 }

@@ -9,12 +9,47 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="MemoryAisle - Smart Grocery Shopping">
-  <meta property="og:description" content="Your AI-powered grocery companion. Smart lists, voice assistant, family sharing.">
+  <meta property="og:description" content="Your AI-powered grocery companion. Smart lists, voice assistant, family sharing, and more.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://memoryaisle.app">
+  <meta property="og:image" content="https://memoryaisle.app/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="MemoryAisle">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MemoryAisle - Smart Grocery Shopping">
+  <meta name="twitter:description" content="Your AI-powered grocery companion. Smart lists, voice assistant, family sharing.">
+  <meta name="twitter:image" content="https://memoryaisle.app/images/og-image.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNN0M5TWT7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XNN0M5TWT7');
+  </script>
+
+  <!-- Meta Pixel (uncomment and add your Pixel ID when ready)
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  -->
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +58,50 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MemoryAisle",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "AI-powered grocery companion with smart lists, voice assistant Mira, family sharing, meal planning, trip planning, and receipt scanning.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "name": "Free"
+      },
+      {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "name": "Premium",
+        "billingPeriod": "P1Y"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "SLTR Digital LLC",
+      "url": "https://memoryaisle.app"
+    },
+    "featureList": [
+      "AI-powered grocery assistant (Mira)",
+      "Voice commands",
+      "Family sharing up to 12 members",
+      "Meal planning with smart calendar",
+      "Trip planning",
+      "Receipt scanning",
+      "Store geofencing",
+      "Recipe management",
+      "Allergy and dietary safety alerts",
+      "Cultural and religious traditions"
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Navigation -->

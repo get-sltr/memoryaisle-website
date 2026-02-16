@@ -152,6 +152,19 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('ma_waitlist', JSON.stringify(waitlist));
       this.style.display = 'none';
       document.getElementById('waitlist-success').style.display = 'block';
+
+      // Track waitlist signup in Google Analytics
+      if (typeof gtag === 'function') {
+        gtag('event', 'waitlist_signup', {
+          event_category: 'engagement',
+          event_label: 'homepage_waitlist'
+        });
+      }
+
+      // Track in Meta Pixel (when enabled)
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
     });
   }
 });

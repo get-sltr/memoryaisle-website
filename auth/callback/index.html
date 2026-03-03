@@ -55,7 +55,7 @@
         var deepLink = 'memoryaisle://auth/callback';
 
         if (hash) {
-            deepLink += '#' + hash;
+            deepLink += '?' + hash;
         } else if (search) {
             deepLink += search;
         }

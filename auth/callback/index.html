@@ -3,57 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Verified - MemoryAisle</title>
+    <title>MemoryAisle</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #FDF5E6 0%, #F5E6D0 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            margin: 0;
         }
-        
         .container {
             background: white;
             padding: 60px 40px;
             border-radius: 20px;
             text-align: center;
             max-width: 500px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
-        
         .icon { font-size: 80px; margin-bottom: 20px; }
-        h1 { font-size: 32px; color: #D4A574; margin-bottom: 15px; }
-        p { font-size: 18px; color: #666; margin-bottom: 30px; }
-        
+        h1 { font-size: 28px; color: #2C2C2C; margin-bottom: 15px; }
+        p { font-size: 16px; color: #666; margin-bottom: 30px; line-height: 1.5; }
         .button {
-            background: #000;
+            display: inline-block;
+            background: #C1AB91;
             color: #fff;
             padding: 15px 40px;
-            border-radius: 10px;
+            border-radius: 12px;
             text-decoration: none;
             font-size: 18px;
+            font-weight: 600;
         }
+        .subtle { font-size: 14px; color: #999; margin-top: 20px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="icon">✅</div>
-        <h1>Email Verified!</h1>
-        <p>Your email has been verified. Return to the MemoryAisle app to continue.</p>
-        <a href="memoryaisle://" class="button">Open MemoryAisle</a>
+        <div class="icon" id="icon">⏳</div>
+        <h1 id="title">Redirecting...</h1>
+        <p id="message">Taking you back to MemoryAisle.</p>
+        <a href="memoryaisle://auth/callback" class="button" id="btn" style="display:none;">Open MemoryAisle</a>
+        <p class="subtle" id="subtle" style="display:none;">Didn't open automatically? Tap the button above.</p>
     </div>
-    
+
     <script>
-        const params = new URLSearchParams(window.location.hash.substring(1));
-        const accessToken = params.get('access_token');
-        const type = params.get('type');
-        
-        if (accessToken && type === 'signup') {
-            setTimeout(function() {
-                window.location.href = 'memoryaisle://auth/callback' + window.location.hash;
-            }, 1000);
+        var hash = window.location.hash.substring(1);
+        var search = window.location.search;
+        var params = new URLSearchParams(hash || search);
+        var type = params.get('type');
+        var deepLink = 'memoryaisle://auth/callback';
+
+        if (hash) {
+            deepLink += '#' + hash;
+        } else if (search) {
+            deepLink += search;
         }
+
+        var icon = document.getElementById('icon');
+        var title = document.getElementById('title');
+        var message = document.getElementById('message');
+        var btn = document.getElementById('btn');
+        var subtle = document.getElementById('subtle');
+
+        if (type === 'recovery') {
+            icon.textContent = '🔐';
+            title.textContent = 'Reset Your Password';
+            message.textContent = 'Opening MemoryAisle to set your new password...';
+        } else if (type === 'signup' || type === 'email') {
+            icon.textContent = '✅';
+            title.textContent = 'Email Verified!';
+            message.textContent = 'Opening MemoryAisle...';
+        }
+
+        btn.href = deepLink;
+
+        setTimeout(function() {
+            window.location.href = deepLink;
+        }, 500);
+
+        setTimeout(function() {
+            btn.style.display = 'inline-block';
+            subtle.style.display = 'block';
+        }, 2000);
     </script>
 </body>
 </html>

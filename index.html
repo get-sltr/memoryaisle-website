@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MemoryAisle - Smart Grocery Shopping</title>
-  <meta name="description" content="MemoryAisle is your AI-powered grocery companion. Smart lists, voice assistant, family sharing, and more. Grocery shopping, elevated.">
-  <meta name="keywords" content="grocery app, shopping list, AI assistant, family sharing, meal planning">
+  <title>MemoryAisle - GLP-1 Nutrition That Protects Muscle</title>
+  <meta name="description" content="Lose fat without losing muscle. MemoryAisle adapts meals, grocery lists, and daily guidance to your GLP-1 medication cycle, appetite, and training goals.">
+  <meta name="keywords" content="glp1, ozempic, wegovy, mounjaro, zepbound, protein, meal plan, nutrition, muscle preservation, body composition, weight loss">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="MemoryAisle - Smart Grocery Shopping">
-  <meta property="og:description" content="Your AI-powered grocery companion. Smart lists, voice assistant, family sharing, and more.">
+  <meta property="og:title" content="MemoryAisle - Lose Fat Without Losing Muscle">
+  <meta property="og:description" content="AI-powered meal planning that adapts to your GLP-1 medication cycle, appetite, and training goals.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://memoryaisle.app">
   <meta property="og:image" content="https://memoryaisle.app/images/og-image.png">
@@ -19,8 +19,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MemoryAisle - Smart Grocery Shopping">
-  <meta name="twitter:description" content="Your AI-powered grocery companion. Smart lists, voice assistant, family sharing.">
+  <meta name="twitter:title" content="MemoryAisle - Lose Fat Without Losing Muscle">
+  <meta name="twitter:description" content="AI-powered meal planning for GLP-1 users who care about body composition.">
   <meta name="twitter:image" content="https://memoryaisle.app/images/og-image.png">
 
   <!-- Favicon -->
@@ -58,399 +58,296 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css">
-
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "MemoryAisle",
-    "applicationCategory": "LifestyleApplication",
-    "operatingSystem": "iOS, Android",
-    "description": "AI-powered grocery companion with smart lists, voice assistant Mira, family sharing, meal planning, trip planning, and receipt scanning.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS",
+    "description": "Adaptive nutrition platform for GLP-1 users. Personalized meals, grocery lists, and daily guidance that protect lean mass.",
     "offers": [
-      {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "name": "Free"
-      },
-      {
-        "@type": "Offer",
-        "price": "49.99",
-        "priceCurrency": "USD",
-        "name": "Premium",
-        "billingPeriod": "P1Y"
-      }
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "SLTR Digital LLC",
-      "url": "https://memoryaisle.app"
-    },
-    "featureList": [
-      "AI-powered grocery assistant (Mira)",
-      "Voice commands",
-      "Family sharing up to 12 members",
-      "Meal planning with smart calendar",
-      "Trip planning",
-      "Receipt scanning",
-      "Store geofencing",
-      "Recipe management",
-      "Allergy and dietary safety alerts",
-      "Cultural and religious traditions"
+      { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free" },
+      { "@type": "Offer", "price": "49.99", "priceCurrency": "USD", "name": "Pro Annual" }
     ]
   }
   </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0A0914;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    nav {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(167,139,250,0.08);
+    }
+    nav .container { display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 500; letter-spacing: 0.5px; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: #A78BFA; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 100px 0 80px;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #A78BFA;
+      background: rgba(167,139,250,0.08);
+      border: 1px solid rgba(167,139,250,0.15);
+      border-radius: 100px;
+      padding: 8px 20px;
+      margin-bottom: 32px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 24px;
+    }
+    .hero h1 span { color: #A78BFA; }
+    .hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.5);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #A78BFA;
+      color: #0A0914;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px 36px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .hero-cta:hover { background: #8B5CF6; transform: translateY(-1px); }
+    .hero-cta svg { width: 18px; height: 18px; }
+
+    /* Features */
+    .features { padding: 80px 0; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: rgba(167,139,250,0.04);
+      border: 1px solid rgba(167,139,250,0.08);
+      border-radius: 16px;
+      padding: 32px;
+      transition: border-color 0.2s;
+    }
+    .feature-card:hover { border-color: rgba(167,139,250,0.2); }
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(167,139,250,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .feature-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+    .feature-card p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+    /* Trust */
+    .trust {
+      padding: 80px 0;
+      text-align: center;
+      border-top: 1px solid rgba(167,139,250,0.06);
+    }
+    .trust h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+    .trust > p { color: rgba(255,255,255,0.4); margin-bottom: 48px; font-size: 15px; }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      text-align: left;
+    }
+    .trust-item {
+      background: rgba(167,139,250,0.03);
+      border: 1px solid rgba(167,139,250,0.06);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .trust-item .icon { font-size: 20px; margin-bottom: 12px; }
+    .trust-item h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .trust-item p { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.5; }
+
+    /* CTA */
+    .bottom-cta {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .bottom-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+    .bottom-cta p { color: rgba(255,255,255,0.4); margin-bottom: 32px; }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid rgba(167,139,250,0.06);
+      text-align: center;
+    }
+    footer .links { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; flex-wrap: wrap; }
+    footer .links a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; }
+    footer .links a:hover { color: #A78BFA; }
+    footer .copy { font-size: 12px; color: rgba(255,255,255,0.2); }
+
+    @media (max-width: 640px) {
+      .hero { padding: 60px 0 40px; }
+      .nav-links { gap: 16px; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">
-        <img src="images/logo.png" alt="MemoryAisle" class="logo-img">
-        <span class="logo-text">MemoryAisle</span>
-      </a>
+
+  <nav>
+    <div class="container">
+      <div class="nav-logo">MemoryAisle</div>
       <div class="nav-links">
         <a href="#features">Features</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="#download" class="nav-cta">Get Notified</a>
+        <a href="#privacy">Privacy</a>
+        <a href="/support">Support</a>
       </div>
-      <button class="mobile-menu-btn" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-bg">
-      <div class="hero-gradient"></div>
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="hero-title">
-          Grocery shopping,<br>
-          <span class="gold-text">elevated.</span>
-        </h1>
-        <p class="hero-subtitle">
-          Meet Mira, your AI-powered grocery companion. Smart lists, voice commands,
-          family sharing, and traditions that remember what you love.
-        </p>
-        <div class="hero-buttons">
-          <a href="#download" class="btn btn-primary">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
-            </svg>
-            Coming Soon to iOS
-          </a>
-          <a href="#download" class="btn btn-secondary">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
-            </svg>
-            Coming Soon to Android
-          </a>
-        </div>
-      </div>
-      <div class="hero-phone">
-        <div class="phone-frame">
-          <div class="phone-screen">
-            <img src="images/app-screenshot.png" alt="MemoryAisle App" class="phone-screenshot">
-          </div>
-        </div>
-        <div class="phone-glow"></div>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll to explore</span>
-      <div class="scroll-indicator"></div>
+    <div class="container">
+      <div class="hero-badge">For GLP-1 Medication Users</div>
+      <h1>Lose fat<br>without losing <span>muscle</span>.</h1>
+      <p>Personalized meals, grocery lists, and daily guidance that adapt to your appetite, symptoms, and training goals. Powered by Mira, your AI nutrition companion.</p>
+      <a href="https://apps.apple.com/app/memoryaisle" class="hero-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download on the App Store
+      </a>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="features">
+  <section class="features" id="features">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Everything you need for<br><span class="gold-text">smarter shopping</span></h2>
-        <p class="section-subtitle">Powerful features designed to make grocery shopping effortless</p>
-      </div>
-
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
-              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-              <line x1="12" x2="12" y1="19" y2="22"/>
-            </svg>
-          </div>
-          <h3>Mira AI Assistant</h3>
-          <p>Just speak naturally. "Add milk and eggs" or "What's on my list?" Mira understands and responds instantly.</p>
+          <div class="feature-icon">&#127858;</div>
+          <h3>Protein-First Meal Plans</h3>
+          <p>Mira generates daily meals optimized for your protein target, medication phase, and dietary needs. Full cookbook-style recipes with exact ingredients.</p>
         </div>
-
         <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3>Family Sharing</h3>
-          <p>Share lists with your household in real-time. Everyone stays synced, no matter who's at the store.</p>
+          <div class="feature-icon">&#128138;</div>
+          <h3>Medication-Aware</h3>
+          <p>The app knows your injection cycle or oral dosing schedule. On high-nausea days, meals are gentler. On appetite-return days, portions increase.</p>
         </div>
-
         <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
-              <line x1="16" x2="16" y1="2" y2="6"/>
-              <line x1="8" x2="8" y1="2" y2="6"/>
-              <line x1="3" x2="21" y1="10" y2="10"/>
-            </svg>
-          </div>
-          <h3>Smart Calendar</h3>
-          <p>Plan meals for the week and auto-generate shopping lists. Never forget an ingredient again.</p>
+          <div class="feature-icon">&#128722;</div>
+          <h3>Smart Grocery Lists</h3>
+          <p>Scan barcodes in-store and get instant GLP-1 verdicts. Your grocery list is generated from your meal plan gaps.</p>
         </div>
-
         <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3>Traditions</h3>
-          <p>Thanksgiving turkey, birthday cake ingredients, holiday recipes. Your traditions, remembered and ready.</p>
+          <div class="feature-icon">&#128170;</div>
+          <h3>Body Composition Tracking</h3>
+          <p>Track weight, lean mass, and body fat over time. See your muscle preservation score. Share weekly reports with your doctor.</p>
         </div>
-
         <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-          </div>
-          <h3>Store Geofencing</h3>
-          <p>Your list automatically appears when you arrive at the store. Smart shopping starts at the door.</p>
+          <div class="feature-icon">&#127939;</div>
+          <h3>Training-Day Nutrition</h3>
+          <p>Pre-workout carbs, post-workout protein, rest-day adjustments. The app adapts to whether you trained today.</p>
         </div>
-
         <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" x2="8" y1="13" y2="13"/>
-              <line x1="16" x2="8" y1="17" y2="17"/>
-            </svg>
-          </div>
-          <h3>Receipt Scanning</h3>
-          <p>Scan receipts to track spending and learn your preferences. Smarter suggestions over time.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 7V5a2 2 0 0 1 2-2h2"/>
-              <path d="M17 3h2a2 2 0 0 1 2 2v2"/>
-              <path d="M21 17v2a2 2 0 0 1-2 2h-2"/>
-              <path d="M7 21H5a2 2 0 0 1-2-2v-2"/>
-              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-              <path d="M9 9h.01"/>
-              <path d="M15 9h.01"/>
-            </svg>
-          </div>
-          <h3>Trip Planning</h3>
-          <p>Camping, road trips, beach days. Plan meals, pack lists, and budgets for any adventure automatically.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-              <line x1="12" x2="12" y1="6" y2="10"/>
-              <line x1="10" x2="14" y1="8" y2="8"/>
-            </svg>
-          </div>
-          <h3>Recipe Management</h3>
-          <p>Save recipes, generate new ones with AI, and turn any meal plan into a shopping list in one tap.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <path d="M9 12l2 2 4-4"/>
-            </svg>
-          </div>
-          <h3>Allergy & Dietary Safety</h3>
-          <p>Track allergies and dietary needs for every family member. Get alerts before unsafe items reach your cart.</p>
+          <div class="feature-icon">&#129302;</div>
+          <h3>Mira, Your AI Companion</h3>
+          <p>Talk to Mira by voice or text. She knows your medication phase, protein deficit, and symptom history. She adapts in real time.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Mira Section -->
-  <section class="mira-section">
+  <section class="trust" id="privacy">
     <div class="container">
-      <div class="mira-content">
-        <div class="mira-text">
-          <span class="mira-label">Meet Your Assistant</span>
-          <h2 class="mira-title">Say hello to <span class="gold-text">Mira</span></h2>
-          <p class="mira-description">
-            Mira is your AI-powered grocery assistant. She learns your preferences,
-            suggests recipes, manages your lists, and makes shopping feel effortless.
-          </p>
-          <div class="mira-examples">
-            <div class="example-bubble">"Add bananas and almond milk"</div>
-            <div class="example-bubble">"What do I need for pasta night?"</div>
-            <div class="example-bubble">"Clear completed items"</div>
-            <div class="example-bubble">"Plan my camping trip food"</div>
-            <div class="example-bubble">"Is this safe for nut allergies?"</div>
-            <div class="example-bubble">"Share list with Sarah"</div>
-          </div>
+      <h2>Your health data is sacred.</h2>
+      <p>We built MemoryAisle with a zero-knowledge security architecture.</p>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="icon">&#128274;</div>
+          <h4>Medication stays on your phone</h4>
+          <p>Our AI only sees anonymous categories like "GLP-1, low dose, day 2." Never your prescription or brand name.</p>
         </div>
-        <div class="mira-visual">
-          <div class="mira-avatar">
-            <div class="mira-glow"></div>
-            <div class="mira-circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 2a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
-                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-                <line x1="12" x2="12" y1="19" y2="22"/>
-              </svg>
-            </div>
-          </div>
-          <div class="sound-waves">
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
+        <div class="trust-item">
+          <div class="icon">&#127908;</div>
+          <h4>Voice is never recorded</h4>
+          <p>Speech recognition runs on-device using Apple's technology. Only the text reaches Mira. Audio is discarded instantly.</p>
+        </div>
+        <div class="trust-item">
+          <div class="icon">&#9889;</div>
+          <h4>Encrypted twice</h4>
+          <p>Sensitive data is encrypted by AWS and again by our own encryption layer. Even if someone broke into our database, it's unreadable.</p>
+        </div>
+        <div class="trust-item">
+          <div class="icon">&#128465;</div>
+          <h4>Delete means delete</h4>
+          <p>One tap to erase everything. All data permanently removed within 30 days. No questions asked.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Preview -->
-  <section class="pricing-preview">
+  <section class="bottom-cta">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Simple, transparent <span class="gold-text">pricing</span></h2>
-        <p class="section-subtitle">Start free, upgrade when you're ready</p>
-      </div>
-
-      <div class="pricing-cards">
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <h3>Free</h3>
-            <div class="price">$0</div>
-            <p>Perfect for getting started</p>
-          </div>
-          <ul class="pricing-features">
-            <li>2 shopping lists</li>
-            <li>50 items per list</li>
-            <li>10 Mira queries/day</li>
-            <li>1 family member</li>
-            <li>Basic features</li>
-          </ul>
-          <a href="#download" class="btn btn-outline">Get Started</a>
-        </div>
-
-        <div class="pricing-card featured">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-header">
-            <h3>Premium</h3>
-            <div class="price">$49.99<span>/yr</span></div>
-            <p>That's less than $1 a week</p>
-          </div>
-          <ul class="pricing-features">
-            <li>Unlimited lists</li>
-            <li>Unlimited items</li>
-            <li>Unlimited Mira AI</li>
-            <li>12 family members</li>
-            <li>Meal planning</li>
-            <li>Recipe generation</li>
-            <li>Receipt scanning</li>
-            <li>All traditions</li>
-          </ul>
-          <a href="#download" class="btn btn-primary">Coming Soon</a>
-        </div>
-      </div>
-
-      <div class="pricing-link">
-        <a href="pricing.html">View full pricing details →</a>
-      </div>
+      <h2>Start protecting your muscle today.</h2>
+      <p>Free to try. Pro unlocks unlimited meal plans, barcode scans, and provider reports for $49.99/year.</p>
+      <a href="https://apps.apple.com/app/memoryaisle" class="hero-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download on the App Store
+      </a>
     </div>
   </section>
 
-  <!-- Download Section -->
-  <section id="download" class="download-section">
+  <footer>
     <div class="container">
-      <div class="download-content">
-        <h2 class="download-title">Coming soon to<br><span class="gold-text">iOS & Android</span></h2>
-        <p class="download-subtitle">Be the first to know when MemoryAisle launches.</p>
-        <form id="waitlist-form" class="waitlist-form">
-          <div class="waitlist-input-group">
-            <input type="email" placeholder="Enter your email" required class="waitlist-input">
-            <button type="submit" class="btn btn-primary">Notify Me</button>
-          </div>
-          <p class="waitlist-note">No spam, ever. Unsubscribe anytime.</p>
-        </form>
-        <div id="waitlist-success" class="waitlist-success" style="display:none;">
-          <p>You're on the list! We'll let you know when we launch.</p>
-        </div>
+      <div class="links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/security">Security</a>
+        <a href="/support">Support</a>
+        <a href="/delete-account">Delete Account</a>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-main">
-        <div class="footer-brand">
-          <a href="/" class="footer-logo">
-            <img src="images/logo.png" alt="MemoryAisle">
-            <span>MemoryAisle</span>
-          </a>
-          <p>Grocery shopping, elevated.</p>
-          <div class="footer-company">
-            <strong>SLTR DIGITAL LLC</strong>
-            <span>INTELLIGENCE | INNOVATIVE | INTURATIVE</span>
-          </div>
-        </div>
-        <div class="footer-links">
-          <div class="footer-col">
-            <h4>Product</h4>
-            <a href="#features">Features</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="#download">Download</a>
-          </div>
-          <div class="footer-col">
-            <h4>Support</h4>
-            <a href="help.html">Help Center</a>
-            <a href="mailto:support@memoryaisle.app">Contact</a>
-          </div>
-          <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="delete-account.html">Delete Account</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span data-year>2026</span> SLTR Digital LLC. All rights reserved.</p>
-      </div>
+      <div class="copy">SLTR Digital LLC. Los Angeles, CA. memoryaisle.app</div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Protect Your Data - MemoryAisle</title>
+  <meta name="description" content="MemoryAisle security architecture. Zero-knowledge medication processing, AES-256 encryption, on-device voice processing, and more.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #0A0914; color: #fff; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+    nav { padding: 20px 0; border-bottom: 1px solid rgba(167,139,250,0.08); max-width: 960px; margin: 0 auto; padding-left: 24px; padding-right: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 500; text-decoration: none; color: #fff; }
+    nav a.back { font-size: 14px; color: rgba(255,255,255,0.4); text-decoration: none; }
+    nav a.back:hover { color: #A78BFA; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; margin: 60px 0 16px; }
+    .subtitle { color: rgba(255,255,255,0.45); font-size: 16px; margin-bottom: 48px; line-height: 1.6; }
+    .section { margin-bottom: 48px; }
+    .section h2 { font-size: 18px; font-weight: 600; margin-bottom: 16px; color: #A78BFA; }
+    .section p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 12px; }
+    .section strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+    .divider { height: 1px; background: rgba(167,139,250,0.06); margin: 48px 0; }
+    footer { padding: 40px 0; margin-top: 60px; border-top: 1px solid rgba(167,139,250,0.06); text-align: center; }
+    footer a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 12px; }
+    footer a:hover { color: #A78BFA; }
+    .copy { font-size: 12px; color: rgba(255,255,255,0.15); margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo">MemoryAisle</a>
+    <a href="/" class="back">Back to home</a>
+  </nav>
+
+  <div class="container">
+    <h1>How we protect your data</h1>
+    <p class="subtitle">Your health information is personal. Here is exactly what we do with it.</p>
+
+    <div class="section">
+      <h2>Your medication details stay on your phone.</h2>
+      <p>When you tell Mira about your medication, she processes it locally. Our AI only sees general categories like "GLP-1, low dose, day 2" - never your exact prescription or brand name.</p>
+    </div>
+
+    <div class="section">
+      <h2>Your voice is never recorded.</h2>
+      <p>Speech recognition runs on your device using Apple's built-in technology. Only the text of what you said reaches Mira. The audio is discarded instantly.</p>
+    </div>
+
+    <div class="section">
+      <h2>Your body data stays in Apple Health.</h2>
+      <p>We read your weight and body composition to give you better recommendations, but we never copy it to our servers.</p>
+    </div>
+
+    <div class="section">
+      <h2>Everything sensitive is encrypted twice.</h2>
+      <p>Once by AWS (the same infrastructure banks use), and again by our own encryption layer using AES-256-GCM. Even if someone broke into our database, your medication and symptom data would be unreadable.</p>
+    </div>
+
+    <div class="section">
+      <h2>We never sell your data.</h2>
+      <p>Not to pharma companies. Not to insurers. Not to advertisers. Not to anyone. Ever.</p>
+    </div>
+
+    <div class="section">
+      <h2>You can delete everything.</h2>
+      <p>Go to Settings > Privacy > Delete My Account. All your data is permanently erased within 30 days. No questions asked.</p>
+    </div>
+
+    <div class="section">
+      <h2>We never share your data with your employer, insurer, or anyone else</h2>
+      <p>unless you explicitly export a provider report yourself and choose to share it.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <h2>Technical details</h2>
+      <p><strong>Encryption:</strong> AES-256-GCM with AWS KMS envelope encryption for medication, symptom, and body composition data. TLS 1.3 for all data in transit.</p>
+      <p><strong>Authentication:</strong> Amazon Cognito with SRP protocol. Tokens stored in iOS Keychain (hardware-backed). 15-minute access token expiry.</p>
+      <p><strong>On-device processing:</strong> Barcode scanning (Apple Vision), speech recognition (Apple Speech), biometric authentication (Face ID / Touch ID) all run entirely on your device.</p>
+      <p><strong>API protection:</strong> AWS WAF with rate limiting, SQL injection detection, and XSS filtering on all endpoints.</p>
+      <p><strong>Monitoring:</strong> CloudWatch alarms, CloudTrail audit logging, and GuardDuty threat detection active on all infrastructure.</p>
+    </div>
+
+    <div class="section">
+      <h2>Security contact</h2>
+      <p>To report a security vulnerability: <strong>security@memoryaisle.app</strong></p>
+      <p>We acknowledge reports within 48 hours and fix critical issues within 7 days.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/support">Support</a>
+    <div class="copy">SLTR Digital LLC. Los Angeles, CA.</div>
+  </footer>
+</body>
+</html>

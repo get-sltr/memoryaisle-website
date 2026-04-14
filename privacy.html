@@ -46,101 +46,277 @@
 
   <div class="container">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: April 9, 2026</p>
+    <p class="updated">Last updated: April 14, 2026 &middot; Effective: April 14, 2026</p>
 
+    <p>SLTR Digital LLC ("Company," "we," "us," or "our") operates the MemoryAisle mobile application (the "App" or "Service"). This Privacy Policy constitutes a legally binding agreement between you ("User," "you," or "your") and SLTR Digital LLC, governing the collection, use, processing, storage, disclosure, and protection of your personal information and data when you access or use the MemoryAisle application.</p>
+    <p>By downloading, installing, accessing, or using the App, you expressly acknowledge that you have read, understood, and agree to be bound by this Privacy Policy in its entirety. If you do not agree with any provision of this Privacy Policy, you must immediately discontinue use of the App and delete it from your device.</p>
+    <p>This Privacy Policy is designed to comply with applicable data protection and privacy laws, including but not limited to the California Consumer Privacy Act of 2018 as amended by the California Privacy Rights Act of 2020 (collectively, "CCPA/CPRA"), the California Online Privacy Protection Act ("CalOPPA"), the Children's Online Privacy Protection Act ("COPPA"), and applicable state privacy laws in Virginia, Colorado, Connecticut, Texas, and other jurisdictions as may be applicable.</p>
+
+    <h2>1. Definitions</h2>
+    <p>For the purposes of this Privacy Policy, the following terms shall have the meanings set forth below:</p>
+    <p><strong>"Personal Information"</strong> means any information that identifies, relates to, describes, is reasonably capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular individual or household, as defined under applicable law.</p>
+    <p><strong>"Health Data"</strong> means any data related to the physical or mental health of an individual, including but not limited to body weight, body composition measurements, nutritional intake, dietary preferences, symptom logs, medication information, fitness goals, caloric data, macronutrient data, and any other health-related metrics entered into or derived from use of the App.</p>
+    <p><strong>"Device-Local Data"</strong> means any data that is stored exclusively on your mobile device and is not transmitted to, processed by, or accessible to our servers, cloud infrastructure, or any third party.</p>
+    <p><strong>"Cloud-Synced Data"</strong> means data that, upon your express and affirmative opt-in action, is transmitted from your device to our secure cloud infrastructure for backup and synchronization purposes.</p>
+    <p><strong>"AI-Processed Data"</strong> means data that is transmitted to artificial intelligence services for the purpose of generating personalized responses, meal plans, recipes, or nutritional guidance through the Mira companion feature.</p>
+    <p><strong>"Anonymized Data"</strong> means data that has been processed in such a manner that it can no longer be attributed to a specific individual without the use of additional information, provided that such additional information is kept separately and is subject to technical and organizational measures to ensure non-attribution.</p>
+    <p><strong>"Biometric Authentication Data"</strong> means Face ID or Touch ID authentication data processed exclusively by the device operating system; MemoryAisle does not collect, store, process, or have access to your biometric data at any time.</p>
+
+    <h2>2. Data Controller and Contact Information</h2>
+    <p>The data controller responsible for the processing of your personal information is:</p>
+    <p>SLTR Digital LLC<br>Los Angeles, California, United States<br>Contact: <strong>privacy@memoryaisle.app</strong></p>
+    <p>For any inquiries, requests, or complaints regarding this Privacy Policy or our data practices, please contact us at the email address above. We will endeavor to respond to all legitimate requests within thirty (30) calendar days, or such shorter period as may be required by applicable law.</p>
+
+    <h2>3. Categories of Data Collected</h2>
+
+    <h3>3.1 Data Stored Exclusively On-Device (Device-Local Data)</h3>
+    <p>The following categories of data are stored exclusively on your device within the application's protected data container. This data is encrypted at rest by the device operating system using your device passcode. We do not have access to, cannot retrieve, and cannot view this data under any circumstances:</p>
+    <ul>
+      <li><strong>Body Composition Records:</strong> Weight, body fat percentage, lean body mass, progress photographs, and related measurements</li>
+      <li><strong>Meal Records and Meal Plans:</strong> Individual meal entries, AI-generated meal plans, recipe data, and nutritional breakdowns</li>
+      <li><strong>Training Session Records:</strong> Exercise and fitness activity logs</li>
+      <li><strong>Gastrointestinal Tolerance Records:</strong> Food tolerance tracking data related to medication side effects</li>
+      <li><strong>Provider Reports:</strong> Health summaries generated for sharing with your healthcare providers</li>
+      <li><strong>Grocery Lists:</strong> Shopping list items, categories, and completion status</li>
+      <li><strong>Pantry Inventory:</strong> Items in your household pantry as logged manually or via receipt scanner</li>
+      <li><strong>Nutrition Logs:</strong> Daily caloric intake, macronutrient breakdowns, hydration tracking</li>
+      <li><strong>Symptom Logs:</strong> Self-reported symptoms including but not limited to nausea, appetite changes, energy levels, bloating, constipation, and food aversions</li>
+      <li><strong>Progress Photographs:</strong> Images captured or imported for body composition tracking, stored as encrypted binary data</li>
+    </ul>
     <div class="highlight">
-      <p><strong>The short version:</strong> Your medication details never leave your phone. Your voice is never recorded. Your body data stays in Apple Health. We never sell your data to anyone. You can delete everything at any time.</p>
+      <p><strong>Important notice regarding Device-Local Data:</strong> Because this data exists solely on your device, if your device is lost, stolen, destroyed, or reset without a prior backup, this data cannot be recovered by us or any third party. We strongly recommend maintaining regular device backups.</p>
     </div>
 
-    <h2>Who we are</h2>
-    <p>MemoryAisle is operated by SLTR Digital LLC, a company registered in Los Angeles, California. When we say "we," "us," or "our," we mean SLTR Digital LLC.</p>
+    <h3>3.2 Authentication Credentials</h3>
+    <p>Your authentication credentials, specifically your email address and session tokens, are stored in the device's hardware-backed secure credential storage. This storage provides encryption that is accessible only when the device is unlocked by the authenticated user. These credentials are never stored in plaintext or any unencrypted storage mechanism.</p>
 
-    <h2>What data we collect</h2>
-    <p>We classify all data into tiers based on sensitivity. The tier determines how it is stored, encrypted, and accessed.</p>
-
-    <h3>Critical data (stays on your device)</h3>
+    <h3>3.3 Health Platform Integration</h3>
+    <p>With your explicit permission, MemoryAisle integrates with the device's native health platform to read and write the following categories of health data:</p>
+    <p><strong>Data Read:</strong></p>
     <ul>
-      <li>GLP-1 medication type and dosage</li>
-      <li>Injection or dose schedule and timestamps</li>
-      <li>Symptom logs (nausea, appetite, side effects)</li>
-      <li>Body weight and body composition readings</li>
-      <li>Provider report exports</li>
+      <li>Body weight</li>
+      <li>Lean body mass</li>
+      <li>Body fat percentage</li>
     </ul>
-    <p>This data is stored in your device's local database, encrypted by iOS Data Protection. When synced to our servers, it is encrypted with AES-256-GCM before leaving your device. Our AI assistant never receives this data in identifiable form.</p>
-
-    <h3>Sensitive data (encrypted on our servers)</h3>
+    <p><strong>Data Written:</strong></p>
     <ul>
-      <li>Meal plans and nutrition logs</li>
-      <li>Grocery lists and pantry inventory</li>
-      <li>Barcode scan history</li>
-      <li>Mira conversation history</li>
-      <li>User profile (name, email, goals, dietary restrictions)</li>
+      <li>Dietary calories (from logged meals)</li>
+      <li>Dietary protein (from logged meals)</li>
     </ul>
-    <p>This data is encrypted at rest using AWS server-side encryption (SSE-KMS) and in transit using TLS 1.3.</p>
+    <p><strong>Critical disclosure:</strong> Health platform data is held in volatile memory (RAM) only for the duration of active app use. MemoryAisle does not persist, cache, write to disk, or transmit health platform data to any server, cloud service, or third party. When the App is closed or suspended, all health platform data in memory is immediately and irrevocably discarded.</p>
 
-    <h3>Data we do NOT collect</h3>
+    <h3>3.4 Data Transmitted to Cloud Infrastructure (Opt-In Only)</h3>
+    <p>Cloud synchronization is entirely optional and requires your express, affirmative action. No data is automatically transmitted to our servers. Upon initiating a sync, the following data is transmitted:</p>
     <ul>
-      <li>Location data</li>
-      <li>Contacts</li>
-      <li>Browsing history</li>
-      <li>Financial information (payments handled by Apple)</li>
-      <li>Biometric data (Face ID/Touch ID stays in Apple's Secure Enclave)</li>
+      <li><strong>User Profile:</strong> Age, biological sex, current weight, goal weight, medication class (anonymized), dosage tier (anonymized), training level, dietary mode, and calculated nutritional targets</li>
+      <li><strong>Nutrition Logs:</strong> Historical caloric and macronutrient intake records</li>
+      <li><strong>Symptom Logs:</strong> Historical self-reported symptom data</li>
+      <li><strong>Pantry Items:</strong> Current pantry inventory</li>
     </ul>
-
-    <h2>How we use your data</h2>
-    <p>We use your data solely to provide the MemoryAisle service:</p>
+    <p><strong>Data NOT transmitted to cloud infrastructure under any circumstances:</strong></p>
     <ul>
-      <li>Generate personalized meal plans based on your nutrition targets</li>
-      <li>Power Mira's AI recommendations (using anonymized context only)</li>
-      <li>Track your nutrition progress over time</li>
-      <li>Generate provider reports at your request</li>
+      <li>Body composition records and progress photographs</li>
+      <li>Training session records</li>
+      <li>Meal plans and individual meal records</li>
+      <li>Gastrointestinal tolerance records</li>
+      <li>Grocery lists</li>
+      <li>Private journal entries</li>
+      <li>Provider reports</li>
     </ul>
+    <p>Cloud-synced data is transmitted over encrypted connections and stored in encrypted databases with managed encryption keys. Access to this data is restricted to authenticated API calls requiring valid user credentials.</p>
 
-    <h2>What Mira sees</h2>
-    <p>When you talk to Mira, your medication details are anonymized on your device before anything is sent. Mira receives:</p>
+    <h3>3.5 Data Processed by Artificial Intelligence Services</h3>
+    <p>When you interact with Mira, our AI nutrition companion, your typed or spoken message is transmitted to a secure AI processing service for response generation. To protect your privacy, we employ a purpose-built anonymization layer that processes your contextual data before transmission:</p>
+    <p><strong>What IS sent to the AI service:</strong></p>
     <ul>
-      <li>Medication class (e.g., "GLP-1 agonist") - not brand names</li>
-      <li>Dose tier (e.g., "low") - not exact dosages</li>
-      <li>Days since dose - not calendar dates</li>
-      <li>Symptom state (e.g., "mild nausea") - not detailed logs</li>
-      <li>Protein and calorie targets and current intake</li>
+      <li>Your typed or spoken message text</li>
+      <li>Anonymized medication class (generic category rather than specific brand)</li>
+      <li>Anonymized dosage tier (categorical level rather than specific amount)</li>
+      <li>Derived nutritional metrics only: protein target, protein consumed today, water consumed, training level, dietary restrictions</li>
     </ul>
-    <p>Mira never receives your name, email, body weight, or any information that could identify you personally.</p>
+    <p><strong>What is NEVER sent to the AI service:</strong></p>
+    <ul>
+      <li>Your real name</li>
+      <li>Your email address</li>
+      <li>Your age or date of birth</li>
+      <li>Your biological sex</li>
+      <li>Your actual body weight or height</li>
+      <li>Your goal weight</li>
+      <li>Your progress photographs</li>
+      <li>Your journal entries</li>
+      <li>Your provider reports</li>
+      <li>Your location data</li>
+      <li>Any device identifiers</li>
+    </ul>
+    <p><strong>Important disclosure:</strong> While we anonymize contextual data, the content of your messages to Mira is transmitted as-is. If you voluntarily include personal information in your messages, that information will be processed by the AI service. We recommend exercising discretion in the information you share in chat messages.</p>
+    <p>We do not use your Mira conversations to train, improve, or fine-tune any AI models. Your conversations are not shared with, sold to, or disclosed to any third party.</p>
 
-    <h2>Third-party services</h2>
-    <table>
-      <tr><th>Service</th><th>Purpose</th><th>Data shared</th></tr>
-      <tr><td>Amazon Cognito</td><td>Authentication</td><td>Email, password (SRP encrypted)</td></tr>
-      <tr><td>Amazon Bedrock (Claude)</td><td>AI meal generation</td><td>Anonymized nutrition context only</td></tr>
-      <tr><td>OpenFoodFacts</td><td>Barcode nutrition lookup</td><td>Barcode number only (no user ID)</td></tr>
-      <tr><td>Apple HealthKit</td><td>Weight, body composition</td><td>Read-only, never sent to our servers</td></tr>
-      <tr><td>Google Analytics</td><td>Anonymous usage analytics</td><td>No PII, no health data</td></tr>
-    </table>
+    <h3>3.6 Private Journal Data</h3>
+    <p>The Private Journal feature is subject to enhanced privacy protections:</p>
+    <ul>
+      <li>Journal entries are stored exclusively on your device</li>
+      <li>Journal entries are never transmitted to our servers, cloud infrastructure, AI services, or any third party under any circumstances</li>
+      <li>Access to the journal requires biometric authentication (Face ID or Touch ID), enforced at the application level before any content is rendered</li>
+      <li>We have no technical capability to access, read, recover, or reconstruct journal entries</li>
+      <li>Journal entries cannot be subpoenaed from us because we do not possess them</li>
+    </ul>
 
-    <h2>Data retention</h2>
-    <table>
-      <tr><th>Data type</th><th>Retention</th></tr>
-      <tr><td>Medication and symptom logs</td><td>Until you delete or close your account</td></tr>
-      <tr><td>Body composition</td><td>On-device only, never server-stored</td></tr>
-      <tr><td>Meal plans</td><td>12 months rolling</td></tr>
-      <tr><td>Mira conversations</td><td>90 days, you can clear anytime</td></tr>
-      <tr><td>Grocery lists</td><td>30 days after completion</td></tr>
-    </table>
+    <h3>3.7 Data We Do NOT Collect</h3>
+    <p>For the avoidance of doubt, MemoryAisle does NOT collect, process, store, or transmit:</p>
+    <ul>
+      <li>Location data or GPS coordinates</li>
+      <li>Device advertising identifiers</li>
+      <li>Browsing history or web activity</li>
+      <li>Contacts or address book data</li>
+      <li>Call logs or SMS messages</li>
+      <li>Financial information, payment card data, or banking information</li>
+      <li>Social media account information</li>
+      <li>Biometric data (biometric authentication data is processed solely by the device operating system)</li>
+      <li>Device sensor data beyond what is described herein</li>
+      <li>Cross-app tracking data</li>
+      <li>Data from other applications on your device</li>
+    </ul>
 
-    <h2>Your rights</h2>
-    <p><strong>Delete your data:</strong> Settings > Privacy > Delete My Account. All server data is permanently erased within 30 days.</p>
-    <p><strong>Export your data:</strong> Settings > Privacy > Export My Data. Receive all your data as a JSON file.</p>
-    <p><strong>California residents (CCPA):</strong> You have the right to know what data we collect, request deletion, and opt out of data sales. We do not sell your data.</p>
+    <h2>4. Third-Party Services</h2>
 
-    <h2>Children's privacy</h2>
-    <p>MemoryAisle is not intended for children under 13. We do not knowingly collect data from children.</p>
+    <h3>4.1 Service Categories</h3>
+    <p>MemoryAisle utilizes the following categories of third-party services to operate:</p>
+    <ul>
+      <li><strong>Authentication Services:</strong> For secure user identity verification and session management</li>
+      <li><strong>Cloud Infrastructure:</strong> For encrypted storage and transmission of Cloud-Synced Data</li>
+      <li><strong>AI Processing Services:</strong> For generating personalized Mira responses, meal plans, and nutritional guidance</li>
+      <li><strong>Device Health Platform:</strong> For health data integration as described in Section 3.3</li>
+    </ul>
+    <p>All third-party service providers are bound by contractual obligations to protect the confidentiality, integrity, and security of any data they process on our behalf.</p>
 
-    <h2>Changes to this policy</h2>
-    <p>We may update this policy as our practices evolve. We will notify you of material changes through the app or email.</p>
+    <h3>4.2 Absence of Analytics, Advertising, and Tracking Services</h3>
+    <p>MemoryAisle contains <strong>zero</strong> third-party analytics, advertising, crash reporting, or user tracking software. We do not use and have never used any analytics platforms, advertising network integrations, mobile measurement partners, data brokers, or data enrichment services.</p>
+    <p>The only outbound network calls made by the App are to our own secured API endpoints. There are no undisclosed data flows, hidden trackers, or third-party data sharing arrangements.</p>
 
-    <h2>Contact</h2>
-    <p>Questions about this policy: <strong>kevin@sltrdigital.com</strong></p>
-    <p>Security concerns: <strong>security@memoryaisle.app</strong></p>
+    <h2>5. Data Anonymization and Minimization</h2>
+
+    <h3>5.1 Medication Anonymization</h3>
+    <p>MemoryAisle employs a purpose-built anonymization engine that transforms sensitive medication information before any external transmission:</p>
+    <ul>
+      <li>Brand names are replaced with generic pharmacological class labels</li>
+      <li>Specific dosage amounts are replaced with categorical tiers</li>
+      <li>This anonymization is performed on-device before data leaves the application boundary</li>
+    </ul>
+
+    <h3>5.2 Data Minimization Principles</h3>
+    <p>We adhere to the principle of data minimization as follows:</p>
+    <ul>
+      <li>We collect only the data necessary to provide the specific features you choose to use</li>
+      <li>Cloud synchronization transmits only the minimum data set required for backup and cross-device access</li>
+      <li>AI processing receives only anonymized, derived metrics rather than raw personal data</li>
+      <li>Health platform data is never persisted beyond volatile memory</li>
+      <li>No data is collected for purposes unrelated to the direct functionality of the App</li>
+    </ul>
+
+    <h2>6. Data Security Measures</h2>
+
+    <h3>6.1 Encryption</h3>
+    <ul>
+      <li><strong>At Rest (Device):</strong> All Device-Local Data is encrypted by the device operating system. Application data stores are within a sandboxed container providing process-level isolation.</li>
+      <li><strong>At Rest (Cloud):</strong> Cloud-synced data is encrypted using managed encryption keys with industry-standard encryption.</li>
+      <li><strong>In Transit:</strong> All network communications are encrypted using current transport layer security protocols.</li>
+      <li><strong>Credentials:</strong> Authentication credentials are stored in hardware-backed secure storage accessible only when the device is unlocked.</li>
+    </ul>
+
+    <h3>6.2 Access Controls</h3>
+    <ul>
+      <li><strong>Biometric Authentication:</strong> The Private Journal and Provider Report features require biometric authentication before rendering any content.</li>
+      <li><strong>Credential Access Control:</strong> Authentication tokens are accessible only when the device is unlocked by the authenticated user.</li>
+      <li><strong>Server-Side Authorization:</strong> All API endpoints require valid authentication tokens. Infrastructure access is governed by least-privilege access policies.</li>
+    </ul>
+
+    <h3>6.3 Infrastructure Security</h3>
+    <p>Our cloud infrastructure employs web application firewalls, audit logging of all API and infrastructure access, continuous threat detection and monitoring, and dedicated isolated environments. We conduct regular security reviews of our infrastructure and application code.</p>
+
+    <h2>7. Data Retention and Deletion</h2>
+
+    <h3>7.1 Device-Local Data</h3>
+    <p>Device-Local Data persists on your device until you: (a) manually delete it within the App; (b) delete the App from your device; or (c) erase or reset your device. We have no control over and no access to Device-Local Data retention.</p>
+
+    <h3>7.2 Cloud-Synced Data</h3>
+    <p>Cloud-synced data is retained for the duration of your account's existence. Upon account deletion (see Section 7.4), all cloud-synced data is permanently and irrevocably deleted from our systems.</p>
+
+    <h3>7.3 AI Processing Data</h3>
+    <p>Messages sent to Mira are processed in real-time and are not persistently stored by the AI processing service after the response is generated. We do not maintain a server-side log of your Mira conversations. Operational execution logs are retained for a maximum of seven (7) days for debugging purposes and are automatically purged thereafter.</p>
+
+    <h3>7.4 Account Deletion</h3>
+    <p>You may delete your account and all associated cloud-synced data at any time through the Profile section of the App. Upon initiating account deletion:</p>
+    <ul>
+      <li>A confirmation dialog will be presented to prevent accidental deletion</li>
+      <li>All cloud-synced data will be permanently deleted from our servers</li>
+      <li>All local data stores will be wiped from the device</li>
+      <li>Your authentication session will be terminated</li>
+      <li>Your user record will be deactivated</li>
+    </ul>
+    <p>Account deletion is irreversible. Once completed, we cannot recover any data associated with your account.</p>
+
+    <h3>7.5 Data Portability</h3>
+    <p>You may export your data at any time through the App's built-in export functionality. We support data portability rights as required under applicable state privacy laws.</p>
+
+    <h2>8. Your Rights Under Applicable Law</h2>
+
+    <h3>8.1 California Residents (CCPA/CPRA)</h3>
+    <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act as amended by the California Privacy Rights Act:</p>
+    <ul>
+      <li><strong>Right to Know:</strong> You have the right to request disclosure of the categories and specific pieces of personal information we have collected about you, the categories of sources from which that information was collected, the business or commercial purpose for collecting the information, and the categories of third parties with whom we share the information.</li>
+      <li><strong>Right to Delete:</strong> You have the right to request deletion of your personal information, subject to certain exceptions provided by law.</li>
+      <li><strong>Right to Correct:</strong> You have the right to request correction of inaccurate personal information.</li>
+      <li><strong>Right to Opt-Out of Sale/Sharing:</strong> We do not sell or share your personal information as those terms are defined under the CCPA/CPRA. Therefore, no opt-out mechanism is necessary. For the avoidance of doubt: we have never sold, and will never sell, your personal information to any third party for monetary or other valuable consideration.</li>
+      <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> You have the right to limit the use and disclosure of your sensitive personal information. Health Data is considered sensitive personal information under the CPRA. Our use of your Health Data is limited exclusively to providing the App's core functionality as described in this Privacy Policy.</li>
+      <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your privacy rights.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at <strong>privacy@memoryaisle.app</strong>. We will verify your identity before processing your request and will respond within forty-five (45) calendar days, with the possibility of one forty-five (45) day extension where reasonably necessary.</p>
+
+    <h3>8.2 Virginia, Colorado, Connecticut, Texas, and Other State Residents</h3>
+    <p>Residents of states with comprehensive privacy legislation (including but not limited to Virginia, Colorado, Connecticut, Texas, Oregon, Montana, and Iowa) may have similar rights to access, delete, correct, and port their personal data, as well as the right to opt out of targeted advertising, profiling, and sale of personal data. We do not engage in targeted advertising, profiling for decisions that produce legal or similarly significant effects, or sale of personal data. To exercise your rights, contact us at <strong>privacy@memoryaisle.app</strong>.</p>
+
+    <h3>8.3 Right to Appeal</h3>
+    <p>If we decline to take action on your privacy request, you have the right to appeal our decision. To file an appeal, contact us at <strong>privacy@memoryaisle.app</strong> with the subject line "Privacy Appeal." We will respond to your appeal within the timeframe required by applicable law. If your appeal is denied, you may contact your state's Attorney General to file a complaint.</p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>MemoryAisle is not intended for, marketed to, or designed for use by individuals under the age of thirteen (13). We do not knowingly collect personal information from children under thirteen (13). If we become aware that we have inadvertently collected personal information from a child under thirteen (13), we will take immediate steps to delete such information from our systems. If you believe that a child under thirteen (13) has provided us with personal information, please contact us immediately at <strong>privacy@memoryaisle.app</strong>.</p>
+    <p>For users between the ages of thirteen (13) and seventeen (17), we recommend parental or guardian supervision when using the App, particularly with respect to Health Data entry and AI companion interactions.</p>
+
+    <h2>10. International Data Transfers</h2>
+    <p>MemoryAisle's cloud infrastructure is hosted in the United States. If you access the App from outside the United States, please be aware that your Cloud-Synced Data and AI-Processed Data may be transferred to, stored in, and processed in the United States. By using the cloud sync feature, you expressly consent to such transfer. We ensure that all data transfers are protected by the security measures described in Section 6 of this Privacy Policy.</p>
+
+    <h2>11. Changes to This Privacy Policy</h2>
+    <p>We reserve the right to modify, amend, or update this Privacy Policy at any time in our sole discretion. If we make material changes to this Privacy Policy, we will: (a) update the "Last Updated" date at the top of this document; (b) provide notice through the App; and (c) where required by applicable law, obtain your consent to the updated terms. Your continued use of the App following the posting of changes constitutes your acceptance of such changes.</p>
+    <p>We encourage you to review this Privacy Policy periodically to stay informed about our data practices.</p>
+
+    <h2>12. Do Not Track Signals</h2>
+    <p>MemoryAisle does not track users across third-party websites or applications and therefore does not respond to Do Not Track ("DNT") signals. We do not employ any tracking technologies whatsoever.</p>
+
+    <h2>13. App Tracking Transparency</h2>
+    <p>MemoryAisle does not use advertising identifiers and does not engage in any form of cross-app or cross-site tracking. We do not request tracking permission because there is no tracking to authorize.</p>
+
+    <h2>14. Medical Disclaimer</h2>
+    <p>MemoryAisle is a wellness and nutritional planning application. It is NOT a medical device, medical application, or clinical tool. The App does not provide medical advice, diagnosis, or treatment. The AI companion (Mira) is not a licensed healthcare provider, registered dietitian, or medical professional. Any nutritional guidance, meal plans, or health-related information provided by the App or Mira is for informational and general wellness purposes only.</p>
+    <p>Always consult with a qualified healthcare provider before making changes to your diet, exercise regimen, or medication. If you are using prescription medications, follow the guidance of your prescribing physician. Do not disregard, delay, or alter professional medical advice based on information provided by this App.</p>
+    <p>In the event of a medical emergency, contact emergency services immediately. Do not rely on MemoryAisle or Mira for emergency medical guidance.</p>
+
+    <h2>15. Limitation of Liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SLTR DIGITAL LLC SHALL NOT BE LIABLE FOR ANY UNAUTHORIZED ACCESS TO, OR ALTERATION, THEFT, LOSS, OR DESTRUCTION OF, YOUR PERSONAL INFORMATION OR HEALTH DATA THAT IS STORED ON YOUR DEVICE, WHERE SUCH UNAUTHORIZED ACCESS RESULTS FROM YOUR FAILURE TO MAINTAIN ADEQUATE DEVICE SECURITY (INCLUDING BUT NOT LIMITED TO FAILURE TO SET A DEVICE PASSCODE, USE OF A COMPROMISED DEVICE, OR FAILURE TO UPDATE YOUR DEVICE'S OPERATING SYSTEM).</p>
+    <p>OUR TOTAL LIABILITY ARISING OUT OF OR RELATED TO THIS PRIVACY POLICY OR YOUR USE OF THE APP SHALL NOT EXCEED THE GREATER OF: (A) THE AMOUNT YOU PAID FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM; OR (B) FIFTY UNITED STATES DOLLARS ($50.00).</p>
+
+    <h2>16. Dispute Resolution and Governing Law</h2>
+    <p>This Privacy Policy shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law principles. Any dispute arising out of or relating to this Privacy Policy shall be subject to the exclusive jurisdiction of the state and federal courts located in Los Angeles County, California. You hereby irrevocably consent to the personal jurisdiction and venue of such courts.</p>
+
+    <h2>17. Severability</h2>
+    <p>If any provision of this Privacy Policy is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such invalidity, illegality, or unenforceability shall not affect any other provision of this Privacy Policy, and this Privacy Policy shall be construed as if such invalid, illegal, or unenforceable provision had never been contained herein.</p>
+
+    <h2>18. Entire Agreement</h2>
+    <p>This Privacy Policy, together with our Terms of Service, constitutes the entire agreement between you and SLTR Digital LLC with respect to the subject matter hereof and supersedes all prior or contemporaneous communications, representations, or agreements, whether oral or written, with respect to such subject matter.</p>
+
+    <h2>19. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact:</p>
+    <p>SLTR Digital LLC<br>Email: <strong>privacy@memoryaisle.app</strong><br>Website: <a href="https://memoryaisle.app">https://memoryaisle.app</a></p>
+    <p>For privacy-specific requests, please include "Privacy Request" in the subject line of your email. We will acknowledge receipt of your request within five (5) business days and provide a substantive response within the timeframe required by applicable law.</p>
   </div>
 
   <footer>

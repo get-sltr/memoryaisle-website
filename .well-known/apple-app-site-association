@@ -1,0 +1,34 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["C6RNG52SMC.com.sltrdigital.MemoryAisle2"],
+        "components": [
+          { "/": "/", "exclude": true },
+          { "/": "/privacy", "exclude": true },
+          { "/": "/privacy/*", "exclude": true },
+          { "/": "/terms", "exclude": true },
+          { "/": "/terms/*", "exclude": true },
+          { "/": "/security", "exclude": true },
+          { "/": "/security/*", "exclude": true },
+          { "/": "/support", "exclude": true },
+          { "/": "/support/*", "exclude": true },
+          { "/": "/delete-account", "exclude": true },
+          { "/": "/delete-account/*", "exclude": true },
+          { "/": "/help", "exclude": true },
+          { "/": "/help/*", "exclude": true },
+          { "/": "/pricing", "exclude": true },
+          { "/": "/pricing/*", "exclude": true },
+          { "/": "/images/*", "exclude": true },
+          { "/": "/css/*", "exclude": true },
+          { "/": "/js/*", "exclude": true },
+          { "/": "/.well-known/*", "exclude": true },
+          { "/": "*" }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["C6RNG52SMC.com.sltrdigital.MemoryAisle2"]
+  }
+}

@@ -21,11 +21,20 @@
           "value": "1; mode=block"
         }
       ]
+    },
+    {
+      "source": "/.well-known/apple-app-site-association",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ]
     }
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!\\.well-known).*)",
       "destination": "/$1.html"
     }
   ]

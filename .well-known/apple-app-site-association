@@ -19,6 +19,8 @@
           { "/": "/help/*", "exclude": true },
           { "/": "/pricing", "exclude": true },
           { "/": "/pricing/*", "exclude": true },
+          { "/": "/blog", "exclude": true },
+          { "/": "/blog/*", "exclude": true },
           { "/": "/images/*", "exclude": true },
           { "/": "/css/*", "exclude": true },
           { "/": "/js/*", "exclude": true },

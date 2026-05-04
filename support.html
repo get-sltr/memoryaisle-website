@@ -7,36 +7,7 @@
   <title>Support - MemoryAisle</title>
   <meta name="description" content="Get help with MemoryAisle. Contact our support team for questions about your account, meal plans, or app features.">
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', -apple-system, sans-serif; background: #0A0914; color: #fff; -webkit-font-smoothing: antialiased; }
-    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
-    nav { padding: 20px 0; border-bottom: 1px solid rgba(167,139,250,0.08); max-width: 960px; margin: 0 auto; padding-left: 24px; padding-right: 24px; display: flex; justify-content: space-between; align-items: center; }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 500; text-decoration: none; color: #fff; }
-    nav a.back { font-size: 14px; color: rgba(255,255,255,0.4); text-decoration: none; }
-    nav a.back:hover { color: #A78BFA; }
-    h1 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; margin: 60px 0 16px; }
-    .subtitle { color: rgba(255,255,255,0.45); font-size: 16px; margin-bottom: 48px; line-height: 1.6; }
-    .card { background: rgba(167,139,250,0.04); border: 1px solid rgba(167,139,250,0.08); border-radius: 16px; padding: 32px; margin-bottom: 20px; }
-    .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
-    .card p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.6; }
-    .card a { color: #A78BFA; text-decoration: none; }
-    .card a:hover { text-decoration: underline; }
-    .faq { margin-top: 48px; }
-    .faq h2 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; margin-bottom: 24px; }
-    .faq-item { border-bottom: 1px solid rgba(167,139,250,0.06); padding: 20px 0; }
-    .faq-item h4 { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
-    .faq-item p { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.6; }
-    footer { padding: 40px 0; margin-top: 60px; border-top: 1px solid rgba(167,139,250,0.06); text-align: center; }
-    footer a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 12px; }
-    footer a:hover { color: #A78BFA; }
-    .copy { font-size: 12px; color: rgba(255,255,255,0.15); margin-top: 16px; }
-  </style>
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNN0M5TWT7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -45,7 +16,6 @@
     gtag('config', 'G-XNN0M5TWT7');
   </script>
 
-  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -61,67 +31,393 @@
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2366192593898845&ev=PageView&noscript=1"
   /></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: ui-serif, 'New York', 'Times New Roman', Georgia, serif;
+      color: #fff;
+      background: #1a1a1c;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    em { font-style: italic; }
+
+    /* === Atmosphere === */
+    .bg-gradient {
+      position: fixed; inset: 0; z-index: -2;
+      background: linear-gradient(180deg, #1a1a1c 0%, #2a2520 35%, #6b5530 75%, #b88a3d 100%);
+    }
+    .bg-fireflies {
+      position: fixed; inset: 0; z-index: -1;
+      pointer-events: none; width: 100%; height: 100%;
+    }
+
+    /* === Layout === */
+    .wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* === Nav === */
+    nav { padding: 32px 0 12px; }
+    nav .row { display: flex; justify-content: space-between; align-items: center; }
+    .brand {
+      font-size: 18px; font-weight: 400; letter-spacing: 0.04em;
+      color: #fff; text-decoration: none;
+    }
+    .back-link {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+      color: rgba(255,255,255,0.65); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #f5d97a; }
+
+    /* === Page header === */
+    .page-head {
+      text-align: center;
+      padding: 88px 0 64px;
+    }
+    .page-head .marker {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+      color: #f5d97a;
+      display: block;
+      margin-bottom: 28px;
+    }
+    .page-head h1 {
+      font-size: clamp(44px, 6.5vw, 72px);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.005em;
+      margin-bottom: 28px;
+      color: #fff;
+    }
+    .page-head h1 em { color: #fff; font-weight: 300; }
+    .page-head p {
+      font-size: 19px;
+      color: rgba(255,255,255,0.7);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* === Section === */
+    section { padding: 56px 0; }
+    .section-marker {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-size: clamp(26px, 3.5vw, 36px);
+      font-weight: 300;
+      line-height: 1.15;
+      text-align: center;
+      margin: 0 auto 56px;
+      max-width: 22ch;
+      color: #fff;
+    }
+    .section-title em { color: #fff; }
+
+    /* === Contact rows === */
+    .contact-row {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 24px;
+      padding: 28px 0;
+      border-top: 0.5px solid rgba(255,255,255,0.08);
+      align-items: start;
+    }
+    .contact-row:first-of-type { border-top: 0.5px solid rgba(255,255,255,0.2); }
+    .contact-row:last-of-type { border-bottom: 0.5px solid rgba(255,255,255,0.2); }
+    .contact-row .num {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+      color: rgba(245,217,122,0.9);
+      padding-top: 5px;
+    }
+    .contact-row h3 {
+      font-size: 20px; font-weight: 400; letter-spacing: 0.01em;
+      margin-bottom: 8px; color: #fff;
+    }
+    .contact-row p {
+      font-size: 15px; line-height: 1.65;
+      color: rgba(255,255,255,0.65);
+      font-weight: 300;
+    }
+    .contact-row a {
+      color: #f5d97a;
+      text-decoration: none;
+      border-bottom: 0.5px solid rgba(245,217,122,0.4);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .contact-row a:hover {
+      color: #fff8d8;
+      border-bottom-color: rgba(255,248,216,0.7);
+    }
+
+    /* === FAQ === */
+    .faq-item {
+      padding: 24px 0;
+      border-top: 0.5px solid rgba(255,255,255,0.08);
+    }
+    .faq-item:first-of-type { border-top: 0.5px solid rgba(255,255,255,0.2); }
+    .faq-item:last-of-type { border-bottom: 0.5px solid rgba(255,255,255,0.2); }
+    .faq-item h4 {
+      font-size: 19px; font-weight: 400; letter-spacing: 0.01em;
+      margin-bottom: 10px; color: #fff;
+    }
+    .faq-item p {
+      font-size: 15px; line-height: 1.65;
+      color: rgba(255,255,255,0.62);
+      max-width: 64ch;
+      font-weight: 300;
+    }
+
+    /* === Footer === */
+    footer {
+      padding: 56px 0 40px;
+      margin-top: 64px;
+      border-top: 0.5px solid rgba(255,255,255,0.18);
+    }
+    footer .links {
+      display: flex; justify-content: center; gap: 28px;
+      margin-bottom: 24px; flex-wrap: wrap;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+    }
+    footer .links a {
+      color: rgba(255,255,255,0.55); text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer .links a:hover { color: #f5d97a; }
+    .colophon {
+      text-align: center;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .star { display: block; margin: 0 auto 14px; opacity: 0.5; }
+
+    @media (max-width: 640px) {
+      .wrap { padding: 0 24px; }
+      .page-head { padding: 56px 0 40px; }
+      section { padding: 40px 0; }
+      .contact-row { grid-template-columns: 44px 1fr; gap: 16px; }
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <a href="/" class="nav-logo">MemoryAisle</a>
-    <a href="/" class="back">Back to home</a>
+
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <canvas class="bg-fireflies" aria-hidden="true"></canvas>
+
+  <nav class="wrap">
+    <div class="row">
+      <a href="/" class="brand">MemoryAisle</a>
+      <a href="/" class="back-link">&lsaquo; Back</a>
+    </div>
   </nav>
 
-  <div class="container">
-    <h1>Support</h1>
-    <p class="subtitle">We're here to help. Reach out with any questions about your account, meal plans, or app features.</p>
+  <header class="page-head wrap">
+    <span class="marker">Support</span>
+    <h1>We're <em>here</em> to help.</h1>
+    <p>Reach out with any questions about your account, meal plans, or app features.</p>
+  </header>
 
-    <div class="card">
-      <h3>Email Support</h3>
-      <p>For general questions, account issues, or feedback:<br><a href="mailto:kevin@sltrdigital.com">kevin@sltrdigital.com</a></p>
-    </div>
+  <section class="wrap">
+    <div class="section-marker">I &middot; Contact</div>
+    <h2 class="section-title">Three ways to reach us.</h2>
 
-    <div class="card">
-      <h3>Security Concerns</h3>
-      <p>To report a security vulnerability or data concern:<br><a href="mailto:security@memoryaisle.app">security@memoryaisle.app</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Delete Your Account</h3>
-      <p>You can delete your account and all data from the app: Settings > Privacy > Delete My Account. Or visit <a href="/delete-account">memoryaisle.app/delete-account</a>.</p>
-    </div>
-
-    <div class="faq">
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="faq-item">
-        <h4>Is MemoryAisle a medical app?</h4>
-        <p>No. MemoryAisle is a nutrition planning tool. It does not diagnose conditions, recommend medication changes, or provide medical advice. Always consult your prescriber for medical questions.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Does MemoryAisle see my prescription?</h4>
-        <p>No. Your medication details stay on your phone. Our AI only receives anonymous categories like "GLP-1, low dose, day 2." We never see brand names or exact dosages.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Can I use MemoryAisle without a GLP-1 medication?</h4>
-        <p>Yes. During onboarding, select "No, I just want smarter nutrition." The app works for anyone focused on protein-first eating and body composition.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>How do I cancel my subscription?</h4>
-        <p>Subscriptions are managed through Apple. Go to iPhone Settings > Your Name > Subscriptions > MemoryAisle > Cancel.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>What medications are supported?</h4>
-        <p>Ozempic, Wegovy, Wegovy Pill, Mounjaro, Zepbound, Foundayo, Rybelsus, and compounded semaglutide/tirzepatide.</p>
+    <div class="contact-row">
+      <div class="num">I</div>
+      <div>
+        <h3>Email Support</h3>
+        <p>For general questions, account issues, or feedback &mdash; <a href="mailto:support@memoryaisle.app">support@memoryaisle.app</a></p>
       </div>
     </div>
-  </div>
+    <div class="contact-row">
+      <div class="num">II</div>
+      <div>
+        <h3>Security Concerns</h3>
+        <p>To report a security vulnerability or data concern &mdash; <a href="mailto:security@memoryaisle.app">security@memoryaisle.app</a></p>
+      </div>
+    </div>
+    <div class="contact-row">
+      <div class="num">III</div>
+      <div>
+        <h3>Delete Your Account</h3>
+        <p>From the app: Settings &rsaquo; Privacy &rsaquo; Delete My Account. Or visit <a href="/delete-account">memoryaisle.app/delete-account</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-marker">II &middot; Frequently Asked</div>
+    <h2 class="section-title">Answers to the most common questions.</h2>
+
+    <div class="faq-item">
+      <h4>Is MemoryAisle a medical app?</h4>
+      <p>No. MemoryAisle is a nutrition planning tool. It does not diagnose conditions, recommend medication changes, or provide medical advice. Always consult your prescriber for medical questions.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Does MemoryAisle see my prescription?</h4>
+      <p>No. Your medication details stay on your phone. Our AI only receives anonymous categories like "GLP-1, low dose, day 2." We never see brand names or exact dosages.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I use MemoryAisle without a GLP-1 medication?</h4>
+      <p>Yes. During onboarding, select "No, I just want smarter nutrition." The app works for anyone focused on protein-first eating and body composition.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I cancel my subscription?</h4>
+      <p>Subscriptions are managed through Apple. Go to iPhone Settings &rsaquo; Your Name &rsaquo; Subscriptions &rsaquo; MemoryAisle &rsaquo; Cancel.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What medications are supported?</h4>
+      <p>Ozempic, Wegovy, Wegovy Pill, Mounjaro, Zepbound, Foundayo, Rybelsus, and compounded semaglutide/tirzepatide.</p>
+    </div>
+  </section>
 
   <footer>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-    <a href="/security">Security</a>
-    <div class="copy">SLTR Digital LLC. Los Angeles, CA.</div>
+    <div class="wrap">
+      <svg class="star" width="14" height="14" viewBox="0 0 22 22" aria-hidden="true">
+        <path d="M11 0 L12.5 9.5 L22 11 L12.5 12.5 L11 22 L9.5 12.5 L0 11 L9.5 9.5 Z" fill="#f5d97a" opacity="0.6"/>
+      </svg>
+      <div class="links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/security">Security</a>
+        <a href="/delete-account">Delete Account</a>
+      </div>
+      <div class="colophon">SLTR Digital LLC &middot; Los Angeles &middot; memoryaisle.app</div>
+    </div>
   </footer>
+
+  <script>
+    (function () {
+      const canvas = document.querySelector('.bg-fireflies');
+      if (!canvas || !canvas.getContext) return;
+      const ctx = canvas.getContext('2d');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+      let fireflies = [];
+      const mouse = { x: -9999, y: -9999, active: false };
+      let smoothX = 0, smoothY = 0;
+      let running = true;
+
+      const sprite = document.createElement('canvas');
+      sprite.width = sprite.height = 64;
+      (function () {
+        const sctx = sprite.getContext('2d');
+        const g = sctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+        g.addColorStop(0,    'rgba(255, 248, 216, 1)');
+        g.addColorStop(0.18, 'rgba(245, 217, 122, 0.65)');
+        g.addColorStop(0.45, 'rgba(184, 138, 61, 0.18)');
+        g.addColorStop(1,    'rgba(184, 138, 61, 0)');
+        sctx.fillStyle = g;
+        sctx.fillRect(0, 0, 64, 64);
+      })();
+
+      function resize() {
+        w = window.innerWidth; h = window.innerHeight;
+        canvas.width = Math.floor(w * dpr); canvas.height = Math.floor(h * dpr);
+        canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        seed();
+      }
+
+      function seed() {
+        const density = Math.min(360, Math.max(120, Math.floor((w * h) / 4200)));
+        fireflies = [];
+        for (let i = 0; i < density; i++) {
+          const depth = 0.25 + Math.random() * 1.6;
+          fireflies.push({
+            x: Math.random() * w, y: Math.random() * h,
+            r: (0.6 + Math.random() * 1.8) * (0.55 + depth * 0.35),
+            a: 0.30 + Math.random() * 0.55,
+            d: depth, p: Math.random() * Math.PI * 2,
+            s: 0.25 + Math.random() * 0.7,
+            amp: 3 + Math.random() * 12,
+            tw: 0.4 + Math.random() * 0.8
+          });
+        }
+      }
+
+      function onPointer(e) {
+        const t = e.touches && e.touches[0];
+        const x = t ? t.clientX : e.clientX;
+        const y = t ? t.clientY : e.clientY;
+        if (typeof x !== 'number') return;
+        mouse.x = x; mouse.y = y; mouse.active = true;
+      }
+      function onLeave() { mouse.active = false; }
+
+      let t0 = performance.now();
+      function frame(now) {
+        if (!running) return;
+        const t = (now - t0) / 1000;
+        const tx = mouse.active ? (mouse.x / w - 0.5) : 0;
+        const ty = mouse.active ? (mouse.y / h - 0.5) : 0;
+        smoothX += (tx - smoothX) * 0.06;
+        smoothY += (ty - smoothY) * 0.06;
+
+        ctx.clearRect(0, 0, w, h);
+        ctx.globalCompositeOperation = 'lighter';
+
+        for (let i = 0; i < fireflies.length; i++) {
+          const f = fireflies[i];
+          const drift = reduce ? 0 : 1;
+          const px = f.x + Math.sin(t * f.s + f.p) * f.amp * drift - smoothX * 80 * f.d;
+          const py = f.y + Math.cos(t * f.s * 0.7 + f.p) * f.amp * 0.8 * drift - smoothY * 80 * f.d;
+          const tw = 0.55 + Math.sin(t * 1.8 * f.tw + f.p * 2.3) * 0.45;
+
+          let boost = 1;
+          if (mouse.active) {
+            const dx = mouse.x - px, dy = mouse.y - py;
+            const dist2 = dx * dx + dy * dy;
+            if (dist2 < 200 * 200) boost = 1 + (1 - Math.sqrt(dist2) / 200) * 1.6;
+          }
+
+          const alpha = Math.min(1, f.a * tw * boost);
+          const radius = f.r * (1 + (boost - 1) * 0.4);
+          const size = radius * 8;
+          ctx.globalAlpha = alpha;
+          ctx.drawImage(sprite, px - size / 2, py - size / 2, size, size);
+        }
+
+        ctx.globalAlpha = 1;
+        ctx.globalCompositeOperation = 'source-over';
+        requestAnimationFrame(frame);
+      }
+
+      function start() {
+        if (running) return;
+        running = true; t0 = performance.now();
+        requestAnimationFrame(frame);
+      }
+      function stop() { running = false; }
+
+      resize();
+      window.addEventListener('resize', resize, { passive: true });
+      window.addEventListener('mousemove', onPointer, { passive: true });
+      window.addEventListener('touchmove', onPointer, { passive: true });
+      window.addEventListener('mouseleave', onLeave);
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) stop(); else start();
+      });
+      requestAnimationFrame(frame);
+    })();
+  </script>
+
 </body>
 </html>

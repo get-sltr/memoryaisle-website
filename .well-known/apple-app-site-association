@@ -21,6 +21,8 @@
           { "/": "/pricing/*", "exclude": true },
           { "/": "/blog", "exclude": true },
           { "/": "/blog/*", "exclude": true },
+          { "/": "/press", "exclude": true },
+          { "/": "/press/*", "exclude": true },
           { "/": "/images/*", "exclude": true },
           { "/": "/css/*", "exclude": true },
           { "/": "/js/*", "exclude": true },

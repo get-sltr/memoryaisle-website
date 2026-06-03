@@ -167,6 +167,21 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // Track App Store CTA clicks for attribution (pricing, help, delete-account)
+  document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var ct = (el.href.match(/[?&]ct=([^&]+)/) || [])[1] || 'unknown';
+      if (typeof gtag === 'function') {
+        gtag('event', 'app_store_click', {
+          event_category: 'conversion',
+          event_label: ct,
+          article: location.pathname
+        });
+      }
+      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: ct });
+    });
+  });
 });
 
 // Prevent flash of unstyled content

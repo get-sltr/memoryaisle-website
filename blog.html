@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-itunes-app" content="app-id=6761938171">
+  <title>Blog — Notes on GLP-1 nutrition & body composition | MemoryAisle</title>
+  <meta name="description" content="Practical, research-backed writing on protein, body composition, and getting the most from GLP-1 medications like Wegovy, Ozempic, and Mounjaro — without fighting your appetite.">
+  <meta name="keywords" content="glp1 nutrition, protein meal plan, muscle preservation, body composition, ozempic, wegovy, mounjaro, glp1 blog">
+
+  <meta property="og:title" content="The MemoryAisle Blog — Notes on GLP-1 nutrition">
+  <meta property="og:description" content="Practical, research-backed writing on protein, body composition, and getting the most from GLP-1 medications — without fighting your appetite.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://memoryaisle.app/blog">
+  <meta property="og:image" content="https://memoryaisle.app/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="MemoryAisle">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The MemoryAisle Blog — Notes on GLP-1 nutrition">
+  <meta name="twitter:description" content="Research-backed writing on protein, body composition, and GLP-1 medications.">
+  <meta name="twitter:image" content="https://memoryaisle.app/images/og-image.png">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNN0M5TWT7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XNN0M5TWT7');
+  </script>
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2366192593898845');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2366192593898845&ev=PageView&noscript=1"
+  /></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "The MemoryAisle Blog",
+    "url": "https://memoryaisle.app/blog",
+    "description": "Research-backed writing on protein, body composition, and GLP-1 medications.",
+    "publisher": { "@type": "Organization", "name": "MemoryAisle", "url": "https://memoryaisle.app" },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "The GLP-1 cycle: eating with your dose, not against it",
+        "url": "https://memoryaisle.app/blog/glp1-dose-cycle",
+        "datePublished": "2026-05-04"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Hitting your protein target on a GLP-1 when you can barely eat",
+        "url": "https://memoryaisle.app/blog/glp1-protein-target",
+        "datePublished": "2026-05-04"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "39% of the weight you lose on a GLP-1 is muscle. Here's how to keep it.",
+        "url": "https://memoryaisle.app/blog/glp1-muscle-loss",
+        "datePublished": "2026-04-30"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: ui-serif, 'New York', 'Times New Roman', Georgia, serif;
+      color: #fff;
+      background: #1a1a1c;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* === Atmosphere: gradient + fireflies, both fixed === */
+    .bg-gradient {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg, #1a1a1c 0%, #2a2520 35%, #6b5530 75%, #b88a3d 100%);
+      z-index: -2;
+    }
+    .bg-fireflies {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* === Type system === */
+    .mono {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      text-transform: uppercase;
+    }
+    .accent { color: #f5d97a; }
+    em { font-style: italic; }
+
+    /* === Layout === */
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    /* === Nav === */
+    nav {
+      position: relative;
+      padding: 32px 0 12px;
+    }
+    nav .row { display: flex; justify-content: space-between; align-items: center; }
+    .brand {
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #f5d97a; }
+    .nav-links a.current { color: #f5d97a; }
+
+    /* === Page head === */
+    .page-head {
+      text-align: center;
+      padding: 80px 0 56px;
+    }
+    .page-head .badge {
+      display: inline-block;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #f5d97a;
+      margin-bottom: 28px;
+    }
+    .page-head h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 300;
+      line-height: 1.06;
+      letter-spacing: -0.005em;
+      margin: 0 auto 24px;
+      color: #fff;
+      max-width: 16ch;
+    }
+    .page-head p {
+      font-size: 19px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.72);
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    /* === Post list === */
+    .post-list {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+    .post {
+      display: block;
+      text-decoration: none;
+      padding: 40px 32px;
+      margin: 0 -32px;
+      border-top: 0.5px solid rgba(255,255,255,0.14);
+      border-radius: 14px;
+      transition: background 0.25s ease;
+    }
+    .post:last-child { border-bottom: 0.5px solid rgba(255,255,255,0.14); }
+    .post:hover { background: rgba(245,217,122,0.045); }
+    .post-date {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(245,217,122,0.9);
+      margin-bottom: 16px;
+    }
+    .post h2 {
+      font-size: clamp(24px, 3.4vw, 32px);
+      font-weight: 300;
+      line-height: 1.18;
+      letter-spacing: -0.005em;
+      color: #fff;
+      margin-bottom: 14px;
+      transition: color 0.2s;
+    }
+    .post:hover h2 { color: #f5d97a; }
+    .post p {
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.64);
+      font-weight: 300;
+      margin-bottom: 18px;
+      max-width: 60ch;
+    }
+    .post .read {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #f5d97a;
+    }
+
+    /* === Closing CTA === */
+    .closing {
+      text-align: center;
+      padding: 72px 0 80px;
+      border-top: 0.5px solid rgba(255,255,255,0.1);
+      margin-top: 24px;
+    }
+    .closing h2 {
+      font-size: clamp(30px, 5vw, 44px);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .closing p {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 40px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 28px;
+      border: 0.5px solid rgba(245,217,122,0.55);
+      border-radius: 999px;
+      color: #f5d97a;
+      text-decoration: none;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      transition: all 0.25s ease;
+      background: rgba(245,217,122,0.04);
+    }
+    .cta:hover {
+      background: rgba(245,217,122,0.12);
+      border-color: rgba(245,217,122,0.85);
+      color: #fff8d8;
+    }
+    .cta svg { width: 14px; height: 14px; }
+
+    /* === Footer === */
+    footer {
+      padding: 56px 0 40px;
+      border-top: 0.5px solid rgba(255,255,255,0.18);
+    }
+    footer .links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+    footer .links a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    footer .links a:hover { color: #f5d97a; }
+    .colophon {
+      text-align: center;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 9px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .star {
+      display: block;
+      margin: 0 auto 12px;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 640px) {
+      .wrap { padding: 0 24px; }
+      .nav-links { gap: 14px; font-size: 9px; letter-spacing: 0.2em; }
+      .page-head { padding: 48px 0 40px; }
+      .post { padding: 32px 20px; margin: 0 -20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <canvas class="bg-fireflies" aria-hidden="true"></canvas>
+
+  <nav class="wrap">
+    <div class="row">
+      <a href="/" class="brand">MemoryAisle</a>
+      <div class="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/blog" class="current">Blog</a>
+        <a href="/support">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-head wrap">
+    <div class="badge">The Journal</div>
+    <h1>Notes on eating <em>smarter</em>.</h1>
+    <p>Practical, research-backed writing on protein, body composition, and getting the most from GLP-1 medications — without fighting your appetite.</p>
+  </header>
+
+  <main class="wrap">
+    <div class="post-list">
+
+      <a class="post" href="/blog/glp1-dose-cycle">
+        <div class="post-date">May 4, 2026</div>
+        <h2>The GLP-1 cycle: eating with your dose, not against it</h2>
+        <p>Your appetite isn't flat across the week on a GLP-1. Here's the 7-day pattern most people are fighting — and how to plan meals around the trough, the window, and the rebound.</p>
+        <span class="read">Read &rarr;</span>
+      </a>
+
+      <a class="post" href="/blog/glp1-protein-target">
+        <div class="post-date">May 4, 2026</div>
+        <h2>Hitting your protein target on a GLP-1 when you can barely eat</h2>
+        <p>Three strategies for getting 1.6 to 2.2 g/kg of protein on Wegovy, Ozempic, or Mounjaro — even on the day after your shot when food feels impossible.</p>
+        <span class="read">Read &rarr;</span>
+      </a>
+
+      <a class="post" href="/blog/glp1-muscle-loss">
+        <div class="post-date">April 30, 2026</div>
+        <h2>39% of the weight you lose on a GLP-1 is muscle. Here's how to keep it.</h2>
+        <p>Studies show that around 39% of the weight people lose on GLP-1 receptor agonists is lean mass, not fat. Three small changes that protect body composition without fighting your appetite.</p>
+        <span class="read">Read &rarr;</span>
+      </a>
+
+    </div>
+  </main>
+
+  <section class="closing wrap">
+    <h2>Put it into <em>practice</em>.</h2>
+    <p>Free to begin &middot; Pro at $49.99/year</p>
+    <a href="https://apps.apple.com/app/apple-store/id6761938171?pt=128439453&amp;ct=web-blog-index&amp;mt=8" class="cta">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      Download on the App Store
+    </a>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <svg class="star" width="14" height="14" viewBox="0 0 22 22" aria-hidden="true">
+        <path d="M11 0 L12.5 9.5 L22 11 L12.5 12.5 L11 22 L9.5 12.5 L0 11 L9.5 9.5 Z" fill="#f5d97a" opacity="0.6"/>
+      </svg>
+      <div class="links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/security">Security</a>
+        <a href="/support">Support</a>
+        <a href="/delete-account">Delete Account</a>
+      </div>
+      <div class="colophon">SLTR Digital LLC &middot; Los Angeles &middot; memoryaisle.app</div>
+    </div>
+  </footer>
+
+  <script src="/js/fireflies.js"></script>
+
+</body>
+</html>

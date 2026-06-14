@@ -25,6 +25,7 @@
           { "/": "/press/*", "exclude": true },
           { "/": "/download", "exclude": true },
           { "/": "/download/*", "exclude": true },
+          { "/": "/go/*", "exclude": true },
           { "/": "/images/*", "exclude": true },
           { "/": "/css/*", "exclude": true },
           { "/": "/js/*", "exclude": true },

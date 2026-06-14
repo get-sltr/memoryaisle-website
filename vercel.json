@@ -38,6 +38,10 @@
       "destination": "/invite.html"
     },
     {
+      "source": "/go/:campaign",
+      "destination": "/download?ct=web-:campaign"
+    },
+    {
       "source": "/((?!\\.well-known).*)",
       "destination": "/$1.html"
     }

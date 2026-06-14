@@ -47,6 +47,38 @@
       line-height: 1.7;
     }
     .landing-reviews { padding: 48px 0 24px; max-width: 640px; margin: 0 auto; }
+    .landing-guides { padding: 48px 0 0; max-width: 640px; margin: 0 auto; text-align: center; }
+    .landing-guides h2 {
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--white);
+      margin: 12px 0 28px;
+    }
+    .landing-guides h2 em { color: var(--gold); font-style: normal; }
+    .guide-links { display: flex; flex-direction: column; gap: 12px; text-align: left; }
+    .guide-link {
+      display: block;
+      padding: 16px 18px;
+      border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .guide-link:hover { border-color: rgba(245,217,122,0.35); background: rgba(245,217,122,0.04); }
+    .guide-link-title { font-size: 16px; color: var(--white); margin-bottom: 6px; line-height: 1.35; }
+    .guide-link-desc { font-size: 13px; color: var(--white-4); line-height: 1.55; font-weight: 300; }
+    .guide-all {
+      display: inline-block;
+      margin-top: 24px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--white-4);
+      text-decoration: none;
+    }
+    .guide-all:hover { color: var(--gold); }
   </style>
 </head>
 <body>
@@ -76,6 +108,26 @@
     <p class="landing-note">Free to start · Pro at $49.99/year · iPhone only</p>
   </section>
 
+  <section class="wrap wrap-narrow landing-guides">
+    <span class="marker">GLP-1 guides</span>
+    <h2>New to GLP-1? <em>Start here.</em></h2>
+    <div class="guide-links">
+      <a class="guide-link" href="/blog/what-to-eat-on-glp-1" data-ma-blog-promo="what-to-eat-on-glp-1" data-ma-blog-promo-source="download">
+        <div class="guide-link-title">What to Eat on GLP-1: The Complete Food Guide</div>
+        <div class="guide-link-desc">Foods to prioritize, protein targets, and a simple plate framework.</div>
+      </a>
+      <a class="guide-link" href="/blog/glp1-muscle-loss" data-ma-blog-promo="glp1-muscle-loss" data-ma-blog-promo-source="download">
+        <div class="guide-link-title">39% of GLP-1 weight loss can be muscle</div>
+        <div class="guide-link-desc">How to lose fat without losing lean mass on Ozempic or Wegovy.</div>
+      </a>
+      <a class="guide-link" href="/blog/glp-1-meals-for-low-appetite-and-nausea" data-ma-blog-promo="glp-1-meals-for-low-appetite-and-nausea" data-ma-blog-promo-source="download">
+        <div class="guide-link-title">GLP-1 meals for low appetite &amp; nausea</div>
+        <div class="guide-link-desc">20 gentle, high-protein ideas for tough days after your shot.</div>
+      </a>
+    </div>
+    <a class="guide-all" href="/blog" data-ma-blog-promo="blog-index" data-ma-blog-promo-source="download">All articles &rarr;</a>
+  </section>
+
   <section class="wrap wrap-narrow landing-reviews">
     <div data-app-reviews="summary"></div>
     <div data-app-reviews="list" style="margin-top:32px;"></div>
@@ -103,7 +155,9 @@
     (function () {
       var cta = document.getElementById('download-cta');
       var pending = MA.loadPendingInvite();
-      cta.setAttribute('href', pending ? MA.inviteStoreUrl(pending) : MA.appStoreUrl('web-download'));
+      var ct = pending ? MA.inviteCampaignTag(pending) : (MA.campaignTagFromPage() || 'web-download');
+      cta.setAttribute('data-ct', ct);
+      cta.setAttribute('href', pending ? MA.inviteStoreUrl(pending) : MA.appStoreUrl(ct));
     })();
   </script>
 </body>

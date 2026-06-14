@@ -114,95 +114,6 @@
   </script>
 
   <link rel="stylesheet" href="/css/styles.css">
-
-  <style>
-    /* Article components — dark theme, layered on styles.css */
-    .page-head h1 { font-size: clamp(30px, 4.2vw, 46px); }
-    .crumb {
-      font-family: var(--mono);
-      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--white-4); text-align: center; margin-bottom: 24px;
-    }
-    .crumb a { color: var(--white-3); text-decoration: none; transition: color 0.2s; }
-    .crumb a:hover { color: var(--gold); }
-    .crumb .sep { margin: 0 8px; color: var(--white-5); }
-    .article-meta {
-      font-family: var(--mono);
-      font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
-      color: var(--white-4); margin-top: 22px;
-    }
-    .article-body { padding: 8px 0 32px; }
-    .lede { font-size: 21px; line-height: 1.55; color: var(--white-1); font-weight: 300; margin-bottom: 26px; }
-
-    .callout {
-      background: rgba(245,217,122,0.06);
-      border: 0.5px solid rgba(245,217,122,0.3);
-      border-radius: 12px;
-      padding: 22px 24px; margin: 32px 0;
-      font-size: 15.5px; line-height: 1.65; color: var(--white-2); font-weight: 300;
-    }
-    .callout strong { color: var(--gold); font-weight: 500; }
-
-    .table-scroll { overflow-x: auto; margin: 24px 0; -webkit-overflow-scrolling: touch; }
-    .menu-table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 560px; }
-    .menu-table th, .menu-table td {
-      border: 0.5px solid var(--hair-minor);
-      padding: 11px 12px; text-align: left; vertical-align: top;
-      color: var(--white-2); font-weight: 300; line-height: 1.45;
-    }
-    .menu-table th {
-      font-family: var(--mono);
-      font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--gold); font-weight: 400; border-color: var(--hair-major); white-space: nowrap;
-    }
-    .menu-table td.day {
-      font-family: var(--mono);
-      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--white-1); white-space: nowrap;
-    }
-    .menu-table td.protein { color: var(--gold); white-space: nowrap; }
-
-    .cta-card {
-      background: rgba(245,217,122,0.05);
-      border: 0.5px solid rgba(245,217,122,0.28);
-      border-radius: 16px;
-      padding: 32px 28px; margin: 44px 0; text-align: center;
-    }
-    .cta-card .cta-title { font-family: var(--serif); font-size: 25px; font-weight: 400; color: #fff; margin-bottom: 10px; line-height: 1.25; }
-    .cta-card .cta-sub { font-size: 15.5px; line-height: 1.6; color: var(--white-2); font-weight: 300; margin: 0 auto 22px; max-width: 52ch; }
-
-    .faq { margin-top: 8px; }
-    .faq details { border-top: 0.5px solid var(--hair-minor); padding: 18px 2px; }
-    .faq details:first-of-type { border-top: 0.5px solid var(--hair-major); }
-    .faq details:last-of-type { border-bottom: 0.5px solid var(--hair-major); }
-    .faq summary {
-      cursor: pointer; list-style: none;
-      font-size: 18px; font-weight: 400; color: #fff;
-      display: flex; justify-content: space-between; align-items: baseline; gap: 18px;
-    }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: "+"; color: var(--gold); font-size: 22px; font-weight: 300; line-height: 1; }
-    .faq details[open] summary::after { content: "\2013"; }
-    .faq details p { margin: 12px 0 2px; font-size: 15px; line-height: 1.7; color: var(--white-2); font-weight: 300; }
-
-    .related { padding: 48px 0 8px; border-top: 0.5px solid var(--hair-major); margin-top: 48px; }
-    .related-marker {
-      font-family: var(--mono);
-      font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
-      color: var(--white-4); text-align: center; margin-bottom: 28px;
-    }
-    .related-link {
-      display: block; text-align: center;
-      font-family: var(--serif); font-size: 20px; font-weight: 400;
-      color: #fff; text-decoration: none; line-height: 1.3;
-      max-width: 600px; margin: 0 auto 16px; transition: color 0.2s;
-    }
-    .related-link:hover { color: var(--gold); }
-    .disclaimer {
-      font-size: 13px; line-height: 1.7; color: var(--white-4); font-weight: 300;
-      border-top: 0.5px solid var(--hair-minor); margin-top: 40px; padding-top: 24px;
-    }
-  </style>
 </head>
 <body>
 
@@ -216,7 +127,7 @@
     </div>
   </nav>
 
-  <header class="page-head wrap wrap-narrow">
+  <header class="page-head page-head--guide wrap wrap-narrow">
     <nav class="crumb" aria-label="Breadcrumb">
       <a href="/">MemoryAisle</a><span class="sep">&rsaquo;</span><a href="/blog">Blog</a><span class="sep">&rsaquo;</span>High-Protein Meal Plan
     </nav>
@@ -315,7 +226,7 @@
       </a>
     </div>
 
-    <p class="disclaimer">This article is for general educational purposes and is not medical advice. Protein and calorie needs vary from person to person. Always consult your healthcare provider or a registered dietitian before changing your diet, medication, or exercise routine.</p>
+    <p class="disclaimer-plain">This article is for general educational purposes and is not medical advice. Protein and calorie needs vary from person to person. Always consult your healthcare provider or a registered dietitian before changing your diet, medication, or exercise routine.</p>
   </article>
 
   <section class="related wrap wrap-narrow">

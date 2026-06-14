@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MemoryAisle Blog</title>
+    <link>https://memoryaisle.app/blog</link>
+    <description>Research-backed writing on protein, body composition, and GLP-1 medications.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Jun 2026 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://memoryaisle.app/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>What to Eat on GLP-1: The Complete Food Guide</title>
+      <link>https://memoryaisle.app/blog/what-to-eat-on-glp-1</link>
+      <guid isPermaLink="true">https://memoryaisle.app/blog/what-to-eat-on-glp-1</guid>
+      <pubDate>Tue, 03 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Foods to prioritize, foods to limit, protein targets, and a simple plate framework for Ozempic, Wegovy, and Zepbound.</description>
+    </item>
+    <item>
+      <title>High-Protein GLP-1 Meal Plan: A 7-Day Menu</title>
+      <link>https://memoryaisle.app/blog/high-protein-glp-1-meal-plan</link>
+      <guid isPermaLink="true">https://memoryaisle.app/blog/high-protein-glp-1-meal-plan</guid>
+      <pubDate>Tue, 03 Jun 2026 12:00:00 GMT</pubDate>
+      <description>A free 7-day high-protein plan for Ozempic, Wegovy, and Zepbound — easy meals hitting 100g+ protein a day.</description>
+    </item>
+    <item>
+      <title>GLP-1 Meals for Low Appetite &amp; Nausea: 20 Gentle Ideas</title>
+      <link>https://memoryaisle.app/blog/glp-1-meals-for-low-appetite-and-nausea</link>
+      <guid isPermaLink="true">https://memoryaisle.app/blog/glp-1-meals-for-low-appetite-and-nausea</guid>
+      <pubDate>Tue, 03 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Gentle, high-protein meals for low appetite and nausea on Ozempic, Wegovy, or Zepbound.</description>
+    </item>
+    <item>
+      <title>Every meal screened. Every allergen blocked.</title>
+      <link>https://memoryaisle.app/blog/v2.2-allergy-safety</link>
+      <guid isPermaLink="true">https://memoryaisle.app/blog/v2.2-allergy-safety</guid>
+      <pubDate>Sat, 17 May 2026 12:00:00 GMT</pubDate>
+      <description>MemoryAisle 2.2 introduces a code-level allergy safety system for every meal Mira suggests.</description>
+    </item>
+    <item>
+      <title>The GLP-1 cycle: eating with your dose, not against it</title>
+      <link>https://memoryaisle.app/blog/glp1-dose-cycle</link>
+      <guid isPermaLink="true">https://memoryaisle.app/blog/glp1-dose-cycle</guid>
+      <pubDate>Sun, 04 May 2026 12:00:00 GMT</pubDate>
+      <description>How to plan meals around the trough, the window, and the rebound on a weekly GLP-1 dose.</description>
+    </item>
+    <item>
+      <title>Hitting your protein target on a GLP-1 when you can barely eat</title>
+      <link>https://memoryaisle.app/blog/glp1-protein-target</link>
+      <guid isPermaLink="true">https://memoryaisle.app/blog/glp1-protein-target</guid>
+      <pubDate>Sun, 04 May 2026 12:00:00 GMT</pubDate>
+      <description>Three strategies for getting enough protein on Wegovy, Ozempic, or Mounjaro — even on tough days.</description>
+    </item>
+    <item>
+      <title>39% of the weight you lose on a GLP-1 is muscle. Here's how to keep it.</title>
+      <link>https://memoryaisle.app/blog/glp1-muscle-loss</link>
+      <guid isPermaLink="true">https://memoryaisle.app/blog/glp1-muscle-loss</guid>
+      <pubDate>Wed, 30 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Studies show around 39% of GLP-1 weight loss can be lean mass. Three changes that protect body composition.</description>
+    </item>
+  </channel>
+</rss>

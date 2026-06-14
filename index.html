@@ -355,6 +355,82 @@
       font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.55);
     }
 
+    /* === Featured blog === */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .blog-card {
+      display: block;
+      padding: 28px 24px;
+      border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.02);
+      text-decoration: none;
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .blog-card:hover {
+      border-color: rgba(245,217,122,0.35);
+      background: rgba(245,217,122,0.04);
+    }
+    .blog-card-tag {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(245,217,122,0.85);
+      margin-bottom: 14px;
+    }
+    .blog-card h3 {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .blog-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.58);
+      font-weight: 300;
+      margin-bottom: 18px;
+    }
+    .blog-card-read {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #f5d97a;
+    }
+    .blog-more {
+      text-align: center;
+      margin-top: 40px;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+    .blog-more a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .blog-more a:hover { color: #f5d97a; }
+    .cell-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #f5d97a;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .cell-link:hover { color: #fff8d8; }
+
     /* === Closing CTA === */
     .closing {
       padding: 96px 0 80px;
@@ -416,6 +492,7 @@
       section { padding: 64px 0; }
       .section-head { margin-bottom: 48px; }
       .reviews-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -477,6 +554,7 @@
         <div class="cell-num">V</div>
         <h3>GLP-1 Medication Support</h3>
         <p>On a GLP-1? The app adapts to your injection cycle or oral dosing schedule. Nausea-safe meals on tough days, bigger portions when appetite returns.</p>
+        <a href="/blog/glp1-muscle-loss" class="cell-link" data-ma-blog-promo="glp1-muscle-loss" data-ma-blog-promo-source="home_glp1_feature">Muscle loss on GLP-1 &rarr;</a>
       </div>
       <div class="cell">
         <div class="cell-num">VI</div>
@@ -499,9 +577,37 @@
     </div>
   </section>
 
+  <section class="wrap" id="journal">
+    <div class="section-head">
+      <div class="section-marker">III &middot; From the Journal</div>
+      <h2 class="section-title">GLP-1 nutrition guides, <em>free to read</em>.</h2>
+    </div>
+    <div class="blog-grid">
+      <a class="blog-card" href="/blog/glp1-muscle-loss" data-ma-blog-promo="glp1-muscle-loss" data-ma-blog-promo-source="home_featured">
+        <div class="blog-card-tag">Body composition</div>
+        <h3>39% of GLP-1 weight loss can be muscle</h3>
+        <p>Three small changes that protect lean mass without fighting your appetite.</p>
+        <span class="blog-card-read">Read &rarr;</span>
+      </a>
+      <a class="blog-card" href="/blog/glp1-protein-target" data-ma-blog-promo="glp1-protein-target" data-ma-blog-promo-source="home_featured">
+        <div class="blog-card-tag">Protein</div>
+        <h3>Hitting your protein target when you can barely eat</h3>
+        <p>Practical strategies for Wegovy, Ozempic, and Mounjaro — even on shot day.</p>
+        <span class="blog-card-read">Read &rarr;</span>
+      </a>
+      <a class="blog-card" href="/blog/glp-1-meals-for-low-appetite-and-nausea" data-ma-blog-promo="glp-1-meals-for-low-appetite-and-nausea" data-ma-blog-promo-source="home_featured">
+        <div class="blog-card-tag">Nausea &amp; appetite</div>
+        <h3>20 gentle meals for low appetite days</h3>
+        <p>High-protein ideas that stay down when Ozempic or Wegovy kills your hunger.</p>
+        <span class="blog-card-read">Read &rarr;</span>
+      </a>
+    </div>
+    <p class="blog-more"><a href="/blog" data-ma-blog-promo="blog-index" data-ma-blog-promo-source="home_view_all">View all articles &rarr;</a></p>
+  </section>
+
   <section class="wrap" id="privacy">
     <div class="section-head">
-      <div class="section-marker">III &middot; Privacy</div>
+      <div class="section-marker">IV &middot; Privacy</div>
       <h2 class="section-title"><em>Your health data is sacred.</em></h2>
     </div>
     <div class="privacy-grid">
@@ -547,6 +653,7 @@
         <a href="/terms">Terms</a>
         <a href="/security">Security</a>
         <a href="/support">Support</a>
+        <a href="/blog">Blog</a>
         <a href="/delete-account">Delete Account</a>
       </div>
       <div class="colophon">SLTR Digital LLC &middot; Los Angeles &middot; memoryaisle.app</div>

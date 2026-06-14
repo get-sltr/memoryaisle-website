@@ -14,6 +14,16 @@
         var value = params.get(key);
         if (value) utm[key] = value;
       });
+
+      if (!Object.keys(utm).length) {
+        var ct = (params.get('ct') || '').toLowerCase();
+        if (ct.indexOf('web-fb-') === 0 || ct.indexOf('fb-') === 0) {
+          utm.utm_source = 'facebook';
+          utm.utm_medium = 'group';
+          utm.utm_campaign = ct.replace(/^web-fb-?/, '').replace(/^web-/, '') || 'facebook';
+        }
+      }
+
       if (Object.keys(utm).length) {
         global.sessionStorage.setItem(UTM_KEY, JSON.stringify(utm));
       }
@@ -61,6 +71,18 @@
     } else if (path === '/download') {
       ctx.page_type = 'landing_download';
       ctx.content_group = 'Marketing';
+      try {
+        var dlParams = new URLSearchParams(global.location.search);
+        var dlCt = dlParams.get('ct');
+        if (dlCt) ctx.campaign_tag = dlCt;
+        else if (dlParams.get('utm_source') || dlParams.get('utm_campaign')) {
+          ctx.campaign_tag = [
+            dlParams.get('utm_source'),
+            dlParams.get('utm_medium'),
+            dlParams.get('utm_campaign')
+          ].filter(Boolean).join('_');
+        }
+      } catch (e) { /* noop */ }
     } else if (path.indexOf('/invite') === 0) {
       ctx.page_type = 'landing_invite';
       ctx.content_group = 'Marketing';
@@ -174,6 +196,15 @@
     clickBound = true;
 
     global.document.addEventListener('click', function (e) {
+      var promo = e.target && e.target.closest ? e.target.closest('[data-ma-blog-promo]') : null;
+      if (promo) {
+        track('blog_promo_click', {
+          event_category: 'engagement',
+          promo_source: promo.getAttribute('data-ma-blog-promo-source') || pageContext().page_type,
+          article_slug: promo.getAttribute('data-ma-blog-promo') || ''
+        });
+      }
+
       var el = e.target && e.target.closest ? e.target.closest('a') : null;
       if (!el || !el.href || el.dataset.maAnalyticsSkip) return;
       if (!isAppStoreConversionLink(el.href)) return;

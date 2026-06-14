@@ -24,6 +24,48 @@
     return token.slice(0, 32) || 'unknown';
   }
 
+  /** App Store Connect campaign tag — always web-* for attribution. */
+  function sanitizeCt(value) {
+    var token = String(value || '').trim().toLowerCase().replace(/[^a-z0-9_-]/g, '');
+    if (!token) return 'web-download';
+    if (token.indexOf('web-') === 0) return token.slice(0, 40);
+    return ('web-' + token).slice(0, 40);
+  }
+
+  /** Resolve ct= from ?ct= or utm_* on the current page (e.g. /download). */
+  function campaignTagFromPage() {
+    var params = new URLSearchParams(global.location.search);
+    var ct = params.get('ct');
+    if (ct) return sanitizeCt(decodeURIComponent(ct));
+
+    var source = (params.get('utm_source') || '').toLowerCase();
+    var medium = (params.get('utm_medium') || '').toLowerCase();
+    var campaign = (params.get('utm_campaign') || '').toLowerCase();
+    if (!source && !campaign) return '';
+
+    var parts = ['web'];
+    if (source) parts.push(source.replace(/[^a-z0-9]/g, '').slice(0, 12));
+    if (medium) parts.push(medium.replace(/[^a-z0-9]/g, '').slice(0, 8));
+    if (campaign) parts.push(campaign.replace(/[^a-z0-9_-]/g, '').slice(0, 16));
+    return sanitizeCt(parts.join('-'));
+  }
+
+  /** Short link for social posts: memoryaisle.app/go/fb-ozempic */
+  function goUrl(slug, extraQuery) {
+    var token = sanitizeCampaignToken(slug);
+    var url = 'https://memoryaisle.app/go/' + token;
+    if (!extraQuery) return url;
+    var q = typeof extraQuery === 'string' ? extraQuery : Object.keys(extraQuery).map(function (k) {
+      return encodeURIComponent(k) + '=' + encodeURIComponent(extraQuery[k]);
+    }).join('&');
+    return q ? url + '?' + q : url;
+  }
+
+  /** Direct App Store URL — paste in Facebook when you skip the website. */
+  function shareAppStoreUrl(slug) {
+    return appStoreUrl(sanitizeCt(slug));
+  }
+
   function inviteCampaignTag(code) {
     return code ? ('web-invite-' + sanitizeCampaignToken(code)) : 'web-invite';
   }
@@ -125,6 +167,10 @@
     appStoreUrl: appStoreUrl,
     appStoreReviewsUrl: appStoreReviewsUrl,
     writeReviewUrl: writeReviewUrl,
+    sanitizeCt: sanitizeCt,
+    campaignTagFromPage: campaignTagFromPage,
+    goUrl: goUrl,
+    shareAppStoreUrl: shareAppStoreUrl,
     inviteCampaignTag: inviteCampaignTag,
     inviteStoreUrl: inviteStoreUrl,
     inviteCodeFromPath: inviteCodeFromPath,

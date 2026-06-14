@@ -1,0 +1,11 @@
+# Wrangler uploads everything in [assets] directory by default — exclude non-site files
+.git/
+.gitignore
+.cursor/
+.claude/
+**/.DS_Store
+node_modules/
+*.log
+wrangler.toml
+worker.js
+CLAUDE.md

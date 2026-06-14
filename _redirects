@@ -1,0 +1,2 @@
+# Short campaign links → download page with App Store Connect ct= tag
+/go/* /download?ct=web-:splat 302

@@ -6,36 +6,7 @@
   <meta name="apple-itunes-app" content="app-id=6761938171">
   <title>Terms of Use - MemoryAisle</title>
   <meta name="description" content="MemoryAisle Terms of Use. Rules and guidelines for using the MemoryAisle app.">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', -apple-system, sans-serif; background: #0A0914; color: #fff; -webkit-font-smoothing: antialiased; }
-    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
-    nav { padding: 20px 0; border-bottom: 1px solid rgba(167,139,250,0.08); max-width: 960px; margin: 0 auto; padding-left: 24px; padding-right: 24px; display: flex; justify-content: space-between; align-items: center; }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 500; text-decoration: none; color: #fff; }
-    nav a.back { font-size: 14px; color: rgba(255,255,255,0.4); text-decoration: none; }
-    nav a.back:hover { color: #A78BFA; }
-    h1 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; margin: 60px 0 8px; }
-    .updated { font-size: 13px; color: rgba(255,255,255,0.3); margin-bottom: 48px; }
-    h2 { font-size: 18px; font-weight: 600; margin: 40px 0 12px; color: #A78BFA; }
-    h3 { font-size: 15px; font-weight: 600; margin: 24px 0 8px; }
-    p, li { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.8; }
-    p { margin-bottom: 12px; }
-    ul { padding-left: 20px; margin-bottom: 16px; }
-    li { margin-bottom: 6px; }
-    strong { color: rgba(255,255,255,0.8); }
-    a { color: #A78BFA; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .highlight { background: rgba(167,139,250,0.06); border-left: 3px solid #A78BFA; padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 20px 0; }
-    .highlight p { margin-bottom: 0; }
-    footer { padding: 40px 0; margin-top: 60px; border-top: 1px solid rgba(167,139,250,0.06); text-align: center; }
-    footer a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; margin: 0 12px; }
-    footer a:hover { color: #A78BFA; }
-    .copy { font-size: 12px; color: rgba(255,255,255,0.15); margin-top: 16px; }
-  </style>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNN0M5TWT7"></script>
@@ -62,18 +33,41 @@
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2366192593898845&ev=PageView&noscript=1"
   /></noscript>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .legal-body { padding: 8px 0 64px; }
+    .prose .highlight {
+      background: rgba(245,217,122,0.06);
+      border-left: 3px solid var(--gold);
+      padding: 20px 24px;
+      border-radius: 0 10px 10px 0;
+      margin: 28px 0;
+    }
+    .prose .highlight p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
-  <nav>
-    <a href="/" class="nav-logo">MemoryAisle</a>
-    <a href="/" class="back">Back to home</a>
+
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <canvas class="bg-fireflies" aria-hidden="true"></canvas>
+
+  <nav class="site-nav wrap">
+    <div class="row">
+      <a href="/" class="brand">MemoryAisle</a>
+      <a href="/" class="back-link">&lsaquo; Back</a>
+    </div>
   </nav>
 
-  <div class="container">
-    <h1>Terms of Use</h1>
-    <p class="updated">Last updated: April 14, 2026 &middot; Effective: April 14, 2026</p>
+  <header class="page-head wrap wrap-narrow">
+    <span class="marker">Legal</span>
+    <h1>Terms of <em>Use</em>.</h1>
+    <p class="meta" style="text-align:center;margin-top:8px;">Last updated: April 14, 2026 &middot; Effective: April 14, 2026</p>
+  </header>
 
-    <p>Welcome to MemoryAisle. By accessing, downloading, installing, or using the MemoryAisle mobile application ("App"), you acknowledge that you have read, understood, and agree to be bound by these Terms of Use ("Terms"), together with our <a href="privacy.html">Privacy Policy</a>, which is incorporated herein by reference. MemoryAisle is owned and operated by SLTR Digital LLC, a limited liability company organized under the laws of the State of California ("Company," "we," "us," or "our").</p>
+  <article class="prose legal-body wrap wrap-prose">
+
+    <p>Welcome to MemoryAisle. By accessing, downloading, installing, or using the MemoryAisle mobile application ("App"), you acknowledge that you have read, understood, and agree to be bound by these Terms of Use ("Terms"), together with our <a href="/privacy">Privacy Policy</a>, which is incorporated herein by reference. MemoryAisle is owned and operated by SLTR Digital LLC, a limited liability company organized under the laws of the State of California ("Company," "we," "us," or "our").</p>
     <p>As used in these Terms: "User," "you," or "your" refers to any individual who accesses or uses the App; "Services" refers to all features, functionality, and content available through the App, including but not limited to the Mira AI assistant, grocery list management, meal planning, receipt scanning, and any related services; "Content" refers to text, images, data, recipes, lists, and any other materials created, uploaded, or stored through the App; "Subscription" refers to any paid plan that grants access to premium features.</p>
 
     <h2>1. Acceptance of Terms</h2>
@@ -138,7 +132,7 @@
 
     <h3>7.4 Data Handling</h3>
     <ul>
-      <li>Mira processes your queries and preference data to generate personalized responses. This data is handled in accordance with our <a href="privacy.html">Privacy Policy</a></li>
+      <li>Mira processes your queries and preference data to generate personalized responses. This data is handled in accordance with our <a href="/privacy">Privacy Policy</a></li>
       <li>Mira does not access external accounts, contact lists, or data sources beyond what you explicitly provide within the App</li>
       <li>Conversation data with Mira may be processed by third-party AI service providers to generate responses. These providers are contractually bound to handle data in accordance with their respective privacy and security policies</li>
       <li>You may clear your Mira conversation history at any time through the App settings</li>
@@ -154,7 +148,7 @@
       <li>Receipt scanning requires access to your device's camera. You may grant or revoke camera permissions at any time through your device settings</li>
       <li>OCR technology is not perfect. Extracted data may contain errors, omissions, or inaccuracies due to image quality, receipt formatting, handwriting, or other factors. You are responsible for reviewing and correcting any scanned data</li>
       <li>Receipt images may contain sensitive information such as partial payment card numbers, store loyalty identifiers, or other personal data. You are solely responsible for the content of images you capture and submit through the App</li>
-      <li>Receipt images are processed to extract relevant data and are handled in accordance with our <a href="privacy.html">Privacy Policy</a></li>
+      <li>Receipt images are processed to extract relevant data and are handled in accordance with our <a href="/privacy">Privacy Policy</a></li>
       <li>We do not use receipt data to build advertising profiles, share with third-party marketers, or for any purpose other than providing and improving the Services</li>
     </ul>
 
@@ -224,7 +218,7 @@
     <p>You may terminate your account at any time by using the account deletion feature within the App settings, or by contacting us at <a href="mailto:delete@memoryaisle.app">delete@memoryaisle.app</a>. Upon termination, your right to use the App will immediately cease.</p>
 
     <h3>13.3 Effect of Termination</h3>
-    <p>Upon termination of your account, whether by you or by us: (a) your license to use the App immediately terminates; (b) your data will be deleted in accordance with our <a href="privacy.html">Privacy Policy</a> and the Data Deletion section of these Terms; (c) any active subscription will continue until the end of the current billing period but will not renew; and (d) we are not obligated to retain, return, or provide copies of any User Content.</p>
+    <p>Upon termination of your account, whether by you or by us: (a) your license to use the App immediately terminates; (b) your data will be deleted in accordance with our <a href="/privacy">Privacy Policy</a> and the Data Deletion section of these Terms; (c) any active subscription will continue until the end of the current billing period but will not renew; and (d) we are not obligated to retain, return, or provide copies of any User Content.</p>
 
     <h2>14. Data Deletion and Export</h2>
     <p>You have the right to request deletion of your personal data and account. Upon receiving a deletion request:</p>
@@ -254,7 +248,7 @@
       <li><strong>AI Service Providers:</strong> Mira AI queries are processed using third-party AI models. Your interaction data is transmitted to these providers solely for the purpose of generating responses</li>
       <li><strong>Cloud Infrastructure Providers:</strong> We use third-party cloud infrastructure and database providers for secure data storage, authentication, and real-time functionality</li>
     </ul>
-    <p>SLTR Digital LLC is not responsible or liable for the acts, omissions, availability, security practices, or data handling of any third-party service provider. Your use of third-party services is at your own risk. For details on how third-party providers handle your data, please refer to our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>SLTR Digital LLC is not responsible or liable for the acts, omissions, availability, security practices, or data handling of any third-party service provider. Your use of third-party services is at your own risk. For details on how third-party providers handle your data, please refer to our <a href="/privacy">Privacy Policy</a>.</p>
 
     <h2>17. Disclaimer of Warranties</h2>
     <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, THE APP AND ALL SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ANY WARRANTIES ARISING FROM COURSE OF DEALING, USAGE, OR TRADE PRACTICE.</p>
@@ -291,7 +285,7 @@
     <p>If any provision of these Terms is found to be unlawful, void, or unenforceable by a court or arbitrator of competent jurisdiction, that provision shall be deemed severable from these Terms and shall not affect the validity and enforceability of the remaining provisions. The unenforceable provision shall be replaced with a valid, enforceable provision that most closely reflects the intent and economic effect of the original provision.</p>
 
     <h2>23. Entire Agreement</h2>
-    <p>These Terms, together with our <a href="privacy.html">Privacy Policy</a> and any additional terms or policies referenced herein or agreed to in writing, constitute the entire agreement between you and SLTR Digital LLC with respect to the App and Services, and supersede all prior or contemporaneous understandings, agreements, representations, and warranties, whether written or oral, with respect to the subject matter hereof.</p>
+    <p>These Terms, together with our <a href="/privacy">Privacy Policy</a> and any additional terms or policies referenced herein or agreed to in writing, constitute the entire agreement between you and SLTR Digital LLC with respect to the App and Services, and supersede all prior or contemporaneous understandings, agreements, representations, and warranties, whether written or oral, with respect to the subject matter hereof.</p>
 
     <h2>24. Changes to Terms</h2>
     <p>We reserve the right to modify these Terms at any time. When we make material changes, we will: (a) update the "Last updated" date at the top of this page; (b) provide notice through the App, via email to the address associated with your account, or through other reasonable means. Your continued use of the App following the effective date of any changes constitutes your binding acceptance of the revised Terms. If you do not agree to the modified Terms, you must discontinue use of the App and delete your account.</p>
@@ -304,13 +298,26 @@
     Mira AI Support: <a href="mailto:mira@memoryaisle.app">mira@memoryaisle.app</a><br>
     Account Deletion: <a href="mailto:delete@memoryaisle.app">delete@memoryaisle.app</a><br>
     Website: <a href="https://memoryaisle.app">https://memoryaisle.app</a></p>
-  </div>
 
-  <footer>
-    <a href="/privacy">Privacy</a>
-    <a href="/security">Security</a>
-    <a href="/support">Support</a>
-    <div class="copy">SLTR Digital LLC. Los Angeles, CA.</div>
+  </article>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <svg class="star" width="14" height="14" viewBox="0 0 22 22" aria-hidden="true">
+        <path d="M11 0 L12.5 9.5 L22 11 L12.5 12.5 L11 22 L9.5 12.5 L0 11 L9.5 9.5 Z" fill="#f5d97a" opacity="0.6"/>
+      </svg>
+      <div class="links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/security">Security</a>
+        <a href="/support">Support</a>
+        <a href="/delete-account">Delete Account</a>
+      </div>
+      <div class="colophon">SLTR Digital LLC &middot; Los Angeles &middot; memoryaisle.app</div>
+    </div>
   </footer>
+
+  <script src="/js/analytics.js"></script>
+  <script src="/js/fireflies.js"></script>
 </body>
 </html>

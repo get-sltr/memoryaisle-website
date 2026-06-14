@@ -282,42 +282,8 @@
   </footer>
 
   <script src="/js/fireflies.js"></script>
-  <script>
-    document.querySelectorAll('a.cta, a[href*="apps.apple.com"]').forEach(function (el) {
-      el.addEventListener('click', function () {
-        var ct = (el.href.match(/[?&]ct=([^&]+)/) || [])[1] || 'unknown';
-        if (typeof gtag === 'function') {
-          gtag('event', 'app_store_click', {
-            event_category: 'conversion',
-            event_label: ct,
-            article: 'glp1-dose-cycle'
-          });
-        }
-        if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: ct });
-      });
-    });
-    (function () {
-      var hits = {};
-      function check() {
-        var st = window.scrollY, dh = document.documentElement.scrollHeight - window.innerHeight;
-        if (dh <= 0) return;
-        var pct = Math.round(st / dh * 100);
-        [25, 50, 75, 100].forEach(function (m) {
-          if (pct >= m && !hits[m]) {
-            hits[m] = true;
-            if (typeof gtag === 'function') {
-              gtag('event', 'scroll_depth', {
-                event_category: 'engagement',
-                event_label: 'glp1-dose-cycle',
-                value: m
-              });
-            }
-          }
-        });
-      }
-      window.addEventListener('scroll', check, { passive: true });
-    })();
-  </script>
+  <script src="/js/analytics.js"></script>
+  <script>MAAnalytics.initBlogPost('glp1-dose-cycle');</script>
 
 </body>
 </html>

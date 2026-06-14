@@ -34,6 +34,10 @@
   ],
   "rewrites": [
     {
+      "source": "/invite/:code",
+      "destination": "/invite.html"
+    },
+    {
       "source": "/((?!\\.well-known).*)",
       "destination": "/$1.html"
     }

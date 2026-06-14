@@ -283,6 +283,122 @@ section { padding: 88px 0; position: relative; }
   margin-bottom: 32px;
 }
 
+/* === App Store reviews (live from iTunes RSS) === */
+.reviews-section { padding: 88px 0; }
+.reviews-summary-inner { text-align: center; }
+.reviews-stars, .review-card-stars, .hero-rating-stars {
+  display: inline-flex;
+  gap: 4px;
+  color: var(--gold);
+  font-size: 18px;
+  line-height: 1;
+}
+.hero-rating-stars { font-size: 14px; }
+.review-card-stars { font-size: 14px; }
+.star-glyph { color: rgba(255,255,255,0.18); }
+.star-glyph.is-filled { color: var(--gold); }
+.reviews-score {
+  margin: 12px 0 8px;
+  font-size: 16px;
+  color: var(--white-2);
+  font-weight: 300;
+}
+.reviews-score strong { color: #fff; font-weight: 400; }
+.reviews-link, .reviews-empty a {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--white-3); text-decoration: none;
+  transition: color 0.2s;
+}
+.reviews-link:hover, .reviews-empty a:hover { color: var(--gold); }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.review-card {
+  padding: 24px;
+  border: 0.5px solid var(--hair-minor);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+}
+.review-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.review-card-date {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white-4);
+  white-space: nowrap;
+}
+.review-card-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+.review-card-body {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--white-2);
+  font-weight: 300;
+  margin: 0 0 14px;
+}
+.review-card-meta {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--white-4);
+}
+.reviews-actions {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+.reviews-actions a {
+  color: var(--white-3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.reviews-actions a:hover { color: var(--gold); }
+.hero-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 10px 16px;
+  border: 0.5px solid var(--hair-minor);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.hero-rating:hover {
+  border-color: rgba(245,217,122,0.35);
+  background: rgba(245,217,122,0.04);
+}
+.hero-rating-text {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--white-3);
+}
+
 /* === Closing CTA === */
 .closing { padding: 96px 0 80px; text-align: center; }
 .closing h2 {
@@ -338,4 +454,5 @@ section { padding: 88px 0; position: relative; }
   .section-head { margin-bottom: 48px; }
   .list-row { grid-template-columns: 44px 1fr; gap: 16px; padding: 24px 0; }
   .prose h2 { font-size: 24px; margin: 40px 0 12px; }
+  .reviews-grid { grid-template-columns: 1fr; }
 }

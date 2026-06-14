@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-itunes-app" content="app-id=6761938171">
+  <title>Try MemoryAisle</title>
+  <meta name="description" content="A friend shared MemoryAisle with you — protein-first meal plans and GLP-1-aware nutrition guidance, built for you alone.">
+  <meta property="og:title" content="Try MemoryAisle">
+  <meta property="og:description" content="Personal nutrition for GLP-1 and body composition. Download free on iPhone.">
+  <meta property="og:url" content="https://memoryaisle.app/invite">
+  <meta property="og:image" content="https://memoryaisle.app/images/og-image.png">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNN0M5TWT7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XNN0M5TWT7');
+  </script>
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2366192593898845');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2366192593898845&ev=PageView&noscript=1"
+  /></noscript>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .referral-badge {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 18px;
+      border: 0.5px solid var(--hair-major);
+      border-radius: 999px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .landing-actions { text-align: center; padding-bottom: 64px; }
+    .landing-actions .cta { margin: 0 10px 16px; }
+    .landing-actions .cta-secondary {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 24px;
+      border: 0.5px solid var(--hair-major);
+      border-radius: 999px;
+      color: var(--white-2); text-decoration: none;
+      font-family: var(--mono);
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .landing-actions .cta-secondary:hover {
+      color: var(--gold);
+      border-color: rgba(245,217,122,0.45);
+    }
+    .landing-note {
+      font-family: var(--mono);
+      font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--white-4);
+      max-width: 520px; margin: 8px auto 0;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <canvas class="bg-fireflies" aria-hidden="true"></canvas>
+
+  <nav class="site-nav wrap">
+    <div class="row">
+      <a href="/" class="brand">MemoryAisle</a>
+      <a href="/" class="back-link">&lsaquo; Back</a>
+    </div>
+  </nav>
+
+  <header class="page-head wrap wrap-narrow">
+    <span class="marker">Referral</span>
+    <h1>A friend thought you&rsquo;d like <em>MemoryAisle</em>.</h1>
+    <p id="invite-message">Personal protein-first meal plans and GLP-1-aware guidance — built for your body, not a shared account.</p>
+    <div class="referral-badge" id="referral-badge" hidden></div>
+  </header>
+
+  <section class="wrap wrap-narrow landing-actions">
+    <a href="#" class="cta" id="open-app-cta">Open MemoryAisle</a>
+    <a href="#" class="cta-secondary" id="store-cta">Download on the App Store</a>
+    <p class="landing-note">Your health data stays on your device. MemoryAisle is personal — there is no family sharing or shared lists.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <svg class="star" width="14" height="14" viewBox="0 0 22 22" aria-hidden="true">
+        <path d="M11 0 L12.5 9.5 L22 11 L12.5 12.5 L11 22 L9.5 12.5 L0 11 L9.5 9.5 Z" fill="#f5d97a" opacity="0.6"/>
+      </svg>
+      <div class="links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/support">Support</a>
+      </div>
+      <div class="colophon">SLTR Digital LLC &middot; Los Angeles &middot; memoryaisle.app</div>
+    </div>
+  </footer>
+
+  <script src="/js/analytics.js"></script>
+  <script src="/js/marketing.js"></script>
+  <script src="/js/fireflies.js"></script>
+  <script>
+    (function () {
+      var code = MA.inviteCodeFromPath();
+      var badgeEl = document.getElementById('referral-badge');
+      var msgEl = document.getElementById('invite-message');
+      var openBtn = document.getElementById('open-app-cta');
+      var storeBtn = document.getElementById('store-cta');
+      var storeUrl = MA.inviteStoreUrl(code);
+
+      if (code) {
+        MA.savePendingReferral(code);
+        badgeEl.hidden = false;
+        badgeEl.textContent = 'Shared by a friend';
+        msgEl.textContent = 'Protein-first nutrition that adapts to your GLP-1 cycle, appetite, and body composition goals.';
+        document.title = 'Try MemoryAisle';
+      }
+
+      storeBtn.setAttribute('href', storeUrl);
+
+      openBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (code) MA.savePendingReferral(code);
+        if (window.MAAnalytics) MAAnalytics.trackDeepLinkOpen(code);
+        MA.tryOpenApp(MA.referralDeepLinkPath(code), storeUrl);
+      });
+    })();
+  </script>
+</body>
+</html>

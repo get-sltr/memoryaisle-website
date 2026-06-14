@@ -23,6 +23,8 @@
           { "/": "/blog/*", "exclude": true },
           { "/": "/press", "exclude": true },
           { "/": "/press/*", "exclude": true },
+          { "/": "/download", "exclude": true },
+          { "/": "/download/*", "exclude": true },
           { "/": "/images/*", "exclude": true },
           { "/": "/css/*", "exclude": true },
           { "/": "/js/*", "exclude": true },

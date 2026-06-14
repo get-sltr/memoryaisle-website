@@ -153,35 +153,11 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.display = 'none';
       document.getElementById('waitlist-success').style.display = 'block';
 
-      // Track waitlist signup in Google Analytics
-      if (typeof gtag === 'function') {
-        gtag('event', 'waitlist_signup', {
-          event_category: 'engagement',
-          event_label: 'homepage_waitlist'
-        });
-      }
-
-      // Track in Meta Pixel (when enabled)
-      if (typeof fbq === 'function') {
-        fbq('track', 'Lead');
+      if (window.MAAnalytics && typeof MAAnalytics.trackWaitlistSignup === 'function') {
+        MAAnalytics.trackWaitlistSignup('homepage_waitlist');
       }
     });
   }
-
-  // Track App Store CTA clicks for attribution (pricing, help, delete-account)
-  document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (el) {
-    el.addEventListener('click', function () {
-      var ct = (el.href.match(/[?&]ct=([^&]+)/) || [])[1] || 'unknown';
-      if (typeof gtag === 'function') {
-        gtag('event', 'app_store_click', {
-          event_category: 'conversion',
-          event_label: ct,
-          article: location.pathname
-        });
-      }
-      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: ct });
-    });
-  });
 });
 
 // Prevent flash of unstyled content

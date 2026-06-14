@@ -357,34 +357,8 @@
   </footer>
 
   <script src="/js/fireflies.js"></script>
-  <script>
-    (function () {
-      var ARTICLE = 'what-to-eat-on-glp-1';
-      document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (el) {
-        el.addEventListener('click', function () {
-          var ct = (el.href.match(/[?&]ct=([^&]+)/) || [])[1] || 'unknown';
-          if (typeof gtag === 'function') gtag('event', 'app_store_click', { event_category: 'conversion', event_label: ct, article: ARTICLE });
-          if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: ct });
-        });
-      });
-      document.querySelectorAll('.related-link').forEach(function (el) {
-        el.addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'related_click', { link_url: el.href, article: ARTICLE }); });
-      });
-      document.querySelectorAll('.faq details').forEach(function (d) {
-        d.addEventListener('toggle', function () { if (d.open && typeof gtag === 'function') { var q = d.querySelector('summary'); gtag('event', 'faq_open', { question: q ? q.textContent.trim() : '', article: ARTICLE }); } });
-      });
-      var hits = {};
-      window.addEventListener('scroll', function () {
-        var dh = document.documentElement.scrollHeight - window.innerHeight;
-        if (dh <= 0) return;
-        var pct = Math.round(window.scrollY / dh * 100);
-        [25, 50, 75, 100].forEach(function (m) {
-          if (pct >= m && !hits[m]) { hits[m] = true; if (typeof gtag === 'function') gtag('event', 'scroll_depth', { event_category: 'engagement', event_label: ARTICLE, value: m }); }
-        });
-      }, { passive: true });
-      setTimeout(function () { if (typeof gtag === 'function') gtag('event', 'engaged_read', { engagement_time_msec: 30000, article: ARTICLE }); }, 30000);
-    })();
-  </script>
+  <script src="/js/analytics.js"></script>
+  <script>MAAnalytics.initBlogPost('what-to-eat-on-glp-1');</script>
 
 </body>
 </html>

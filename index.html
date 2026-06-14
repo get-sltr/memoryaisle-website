@@ -295,6 +295,66 @@
       font-weight: 300;
     }
 
+    /* === App Store reviews === */
+    .reviews-summary-inner { text-align: center; margin-bottom: 8px; }
+    .reviews-stars, .review-card-stars, .hero-rating-stars {
+      display: inline-flex; gap: 4px; color: #f5d97a; font-size: 18px; line-height: 1;
+    }
+    .hero-rating-stars { font-size: 14px; }
+    .review-card-stars { font-size: 14px; }
+    .star-glyph { color: rgba(255,255,255,0.18); }
+    .star-glyph.is-filled { color: #f5d97a; }
+    .reviews-score {
+      margin: 12px 0 8px; font-size: 16px; color: rgba(255,255,255,0.72); font-weight: 300;
+    }
+    .reviews-score strong { color: #fff; font-weight: 400; }
+    .reviews-link, .reviews-empty a {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+      color: rgba(255,255,255,0.55); text-decoration: none;
+    }
+    .reviews-link:hover, .reviews-empty a:hover { color: #f5d97a; }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px;
+    }
+    .review-card {
+      padding: 24px; border: 0.5px solid rgba(255,255,255,0.08); border-radius: 12px;
+      background: rgba(255,255,255,0.02);
+    }
+    .review-card-head {
+      display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px;
+    }
+    .review-card-date {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); white-space: nowrap;
+    }
+    .review-card-title { font-size: 18px; font-weight: 400; color: #fff; margin: 0 0 10px; line-height: 1.3; }
+    .review-card-body {
+      font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.62); font-weight: 300; margin: 0 0 14px;
+    }
+    .review-card-meta {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4);
+    }
+    .reviews-actions {
+      display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-top: 40px;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+    }
+    .reviews-actions a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .reviews-actions a:hover { color: #f5d97a; }
+    .hero-rating {
+      display: inline-flex; align-items: center; gap: 10px; margin-top: 28px;
+      padding: 10px 16px; border: 0.5px solid rgba(255,255,255,0.08); border-radius: 999px;
+      text-decoration: none; transition: border-color 0.2s, background 0.2s;
+    }
+    .hero-rating:hover { border-color: rgba(245,217,122,0.35); background: rgba(245,217,122,0.04); }
+    .hero-rating-text {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.55);
+    }
+
     /* === Closing CTA === */
     .closing {
       padding: 96px 0 80px;
@@ -355,6 +415,7 @@
       .nav-links { gap: 14px; font-size: 9px; letter-spacing: 0.2em; }
       section { padding: 64px 0; }
       .section-head { margin-bottom: 48px; }
+      .reviews-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -383,6 +444,7 @@
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
       Download on the App Store
     </a>
+    <div data-app-reviews="hero"></div>
   </header>
 
   <section class="wrap" id="features">
@@ -424,9 +486,22 @@
     </div>
   </section>
 
+  <section class="wrap" id="reviews">
+    <div class="section-head">
+      <div class="section-marker">II &middot; Reviews</div>
+      <h2 class="section-title">What people are <em>saying</em>.</h2>
+    </div>
+    <div data-app-reviews="summary"></div>
+    <div class="reviews-grid" data-app-reviews="list"></div>
+    <div class="reviews-actions">
+      <a href="#" id="reviews-all-link">All App Store reviews</a>
+      <a href="#" id="reviews-write-link">Write a review</a>
+    </div>
+  </section>
+
   <section class="wrap" id="privacy">
     <div class="section-head">
-      <div class="section-marker">II &middot; Privacy</div>
+      <div class="section-marker">III &middot; Privacy</div>
       <h2 class="section-title"><em>Your health data is sacred.</em></h2>
     </div>
     <div class="privacy-grid">
@@ -615,15 +690,15 @@
     })();
   </script>
 
+  <script src="/js/analytics.js"></script>
+  <script src="/js/marketing.js"></script>
+  <script src="/js/app-reviews.js"></script>
   <script>
     (function () {
-      document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (el) {
-        el.addEventListener('click', function () {
-          var ct = (el.href.match(/[?&]ct=([^&]+)/) || [])[1] || 'unknown';
-          if (typeof gtag === 'function') gtag('event', 'app_store_click', { event_category: 'conversion', event_label: ct, article: 'home' });
-          if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: ct });
-        });
-      });
+      var allLink = document.getElementById('reviews-all-link');
+      var writeLink = document.getElementById('reviews-write-link');
+      if (allLink && window.MA) allLink.href = MA.appStoreReviewsUrl();
+      if (writeLink && window.MA) writeLink.href = MA.writeReviewUrl();
     })();
   </script>
 

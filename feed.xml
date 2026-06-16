@@ -5,9 +5,16 @@
     <link>https://memoryaisle.app/blog</link>
     <description>Research-backed writing on protein, body composition, and GLP-1 medications.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jun 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://memoryaisle.app/feed.xml" rel="self" type="application/rss+xml"/>
 
+    <item>
+      <title>Your first week on a GLP-1: eat less, keep your muscle</title>
+      <link>https://memoryaisle.app/blog/glp1-first-week</link>
+      <guid isPermaLink="true">https://memoryaisle.app/blog/glp1-first-week</guid>
+      <pubDate>Tue, 16 Jun 2026 12:00:00 GMT</pubDate>
+      <description>What to eat, what to skip, and how to head off nausea in week one on Ozempic, Wegovy, or Zepbound — with protein first, so you lose fat instead of muscle.</description>
+    </item>
     <item>
       <title>What to Eat on GLP-1: The Complete Food Guide</title>
       <link>https://memoryaisle.app/blog/what-to-eat-on-glp-1</link>

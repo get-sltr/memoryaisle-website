@@ -13,7 +13,7 @@ iOS app identifiers (referenced from this repo):
 
 ## Hosting and URL rewriting
 
-Deployed to **Vercel** (primary, `vercel.json`) with **Cloudflare Workers** also configured (`wrangler.toml`, `[assets] directory = "./"`).
+Deployed to **Cloudflare Workers** (primary — `wrangler.toml` + `worker.js`; deploy with `./deploy.sh`). `vercel.json` is kept for config parity but Vercel is NOT the live host. `worker.js` stamps a strict Content-Security-Policy on every response; only Google Fonts is allowed off-origin.
 
 `vercel.json` enables `cleanUrls: true` and rewrites `/foo` → `/foo.html` for everything except `/.well-known/*`. **Always link to clean URLs** (`/privacy`, not `/privacy.html`) — the rewrite handles it. The `.well-known` exclusion is critical: the apple-app-site-association file must be served with no `.html` suffix and `Content-Type: application/json` (set in `vercel.json` headers).
 
@@ -38,7 +38,7 @@ Notes:
 ## Adding a new public page — checklist
 
 1. Create `<slug>.html` at repo root (or under `blog/`). Vercel will serve it at `/<slug>`.
-2. Copy the GA + Meta Pixel snippets into `<head>` (GA ID `G-XNN0M5TWT7`, Pixel ID `2366192593898845`). They are duplicated in every page; there is no shared template.
+2. Do NOT add any third-party analytics or tracking snippet (no GA, no Meta Pixel, no ad-network tags). This is a health site: article slugs, FAQ text, and campaign tags leak medication context to third parties. The worker CSP blocks trackers at the browser anyway; `js/analytics.js` is intentionally a no-op shim — keep it that way.
 3. Add the URL to `sitemap.xml`.
 4. Add an `exclude` rule for the path in `.well-known/apple-app-site-association` under `applinks.details[0].components` **before** the catch-all `{ "/": "*" }`. Without this, the iOS app will intercept the URL via Universal Links instead of letting the browser load the page. Existing public paths (`/privacy`, `/terms`, `/help`, `/pricing`, etc.) are all explicitly excluded for this reason.
 

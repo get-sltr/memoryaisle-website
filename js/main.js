@@ -141,23 +141,11 @@ document.addEventListener('DOMContentLoaded', function() {
     el.textContent = new Date().getFullYear();
   });
 
-  // Waitlist form
-  const waitlistForm = document.getElementById('waitlist-form');
-  if (waitlistForm) {
-    waitlistForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const email = this.querySelector('input[type="email"]').value;
-      const waitlist = JSON.parse(localStorage.getItem('ma_waitlist') || '[]');
-      waitlist.push({ email: email, date: new Date().toISOString() });
-      localStorage.setItem('ma_waitlist', JSON.stringify(waitlist));
-      this.style.display = 'none';
-      document.getElementById('waitlist-success').style.display = 'block';
-
-      if (window.MAAnalytics && typeof MAAnalytics.trackWaitlistSignup === 'function') {
-        MAAnalytics.trackWaitlistSignup('homepage_waitlist');
-      }
-    });
-  }
+  // Waitlist handler removed intentionally. The old one wrote emails to the
+  // visitor's own localStorage and showed a success message — it never
+  // delivered a single address. Do not re-add a waitlist form without a real
+  // backend endpoint; a form that pretends to sign people up is worse than
+  // no form.
 });
 
 // Prevent flash of unstyled content

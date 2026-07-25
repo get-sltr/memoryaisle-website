@@ -10,6 +10,8 @@ mkdir -p "$STAGE"
 rsync -a \
   --exclude='.git/' \
   --exclude='.wrangler-assets/' \
+  --exclude='.wrangler/' \
+  --exclude='.vercel/' \
   --exclude='.cursor/' \
   --exclude='.claude/' \
   --exclude='node_modules/' \

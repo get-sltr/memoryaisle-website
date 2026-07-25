@@ -50,7 +50,9 @@
     return sanitizeCt(parts.join('-'));
   }
 
-  /** Short link for social posts: memoryaisle.app/go/fb-ozempic */
+  /** Short link for social posts: memoryaisle.app/go/fb-launch
+   *  Never put a medication name in a campaign slug — it ends up in
+   *  URLs, server logs, and attribution reports tied to a user. */
   function goUrl(slug, extraQuery) {
     var token = sanitizeCampaignToken(slug);
     var url = 'https://memoryaisle.app/go/' + token;
@@ -135,17 +137,6 @@
   function trackAppStoreClick(ct, context) {
     if (global.MAAnalytics && typeof global.MAAnalytics.trackAppStoreClick === 'function') {
       global.MAAnalytics.trackAppStoreClick(ct, context ? { page: context } : undefined);
-      return;
-    }
-    if (typeof global.gtag === 'function') {
-      global.gtag('event', 'app_store_click', {
-        event_category: 'conversion',
-        event_label: ct,
-        page: context || global.location.pathname
-      });
-    }
-    if (typeof global.fbq === 'function') {
-      global.fbq('track', 'Lead', { content_name: ct });
     }
   }
 

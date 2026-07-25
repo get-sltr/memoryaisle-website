@@ -1,4 +1,4 @@
-// MemoryAisle Website JavaScript
+// Nourished by Mira Website JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
   // Mobile menu toggle

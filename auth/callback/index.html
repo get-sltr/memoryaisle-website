@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemoryAisle</title>
+    <title>Nourished by Mira</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -42,8 +42,8 @@
     <div class="container">
         <div class="icon" id="icon">⏳</div>
         <h1 id="title">Redirecting...</h1>
-        <p id="message">Taking you back to MemoryAisle.</p>
-        <a href="memoryaisle://auth/callback" class="button" id="btn" style="display:none;">Open MemoryAisle</a>
+        <p id="message">Taking you back to Nourished by Mira.</p>
+        <a href="memoryaisle://auth/callback" class="button" id="btn" style="display:none;">Open Nourished by Mira</a>
         <p class="subtle" id="subtle" style="display:none;">Didn't open automatically? Tap the button above.</p>
     </div>
 
@@ -69,11 +69,11 @@
         if (type === 'recovery') {
             icon.textContent = '🔐';
             title.textContent = 'Reset Your Password';
-            message.textContent = 'Opening MemoryAisle to set your new password...';
+            message.textContent = 'Opening Nourished by Mira to set your new password...';
         } else if (type === 'signup' || type === 'email') {
             icon.textContent = '✅';
             title.textContent = 'Email Verified!';
-            message.textContent = 'Opening MemoryAisle...';
+            message.textContent = 'Opening Nourished by Mira...';
         }
 
         btn.href = deepLink;

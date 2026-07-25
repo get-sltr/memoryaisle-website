@@ -1,4 +1,4 @@
-/* MemoryAisle — analytics shim.
+/* Nourished by Mira — analytics shim.
  *
  * Third-party analytics (GA4, Meta Pixel) were removed from this site.
  * Health-adjacent browsing data (article slugs, FAQ text, campaign tags

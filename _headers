@@ -1,0 +1,10 @@
+# Security headers for every asset response. Cloudflare serves static assets
+# before worker.js runs, so headers set in the worker never reach asset
+# responses — this file is the enforcement point for those. worker.js stamps
+# the same set on dynamically routed paths (/invite/*, /go/*).
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

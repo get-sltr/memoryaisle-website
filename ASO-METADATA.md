@@ -4,18 +4,21 @@ Paste-ready copy for App Store Connect. Submit with the version that changes the
 display name. Character counts are against Apple limits.
 
 ## App name (30 max)
-**Nourished by Mira: GLP-1** (24)
+**Nourished by Mira:GLP1 Protein** (exactly 30)
 
-Alt if rejected for the drug-class term: `Nourished by Mira` (17).
+Constraints that make it fit: no space after the colon, GLP1 without the hyphen.
+Alt if Apple rejects the drug-class term: `Nourished by Mira` (17).
 
 ## Subtitle (30 max)
-**Protein & Lean Mass Coach** (25)
+**Keep your muscle, lose the fat** (exactly 30)
 
-Carries the wedge (lean-mass protection) instead of "macros," where MyFitnessPal
-and the GLP-1 tracker crowd already win.
+The wedge in plain words. Does not repeat "protein" (already in the title —
+Apple indexes title + subtitle + keywords together; duplicates waste slots).
 
 ## Keywords (100 max, no spaces after commas)
-`glp1,semaglutide,tirzepatide,protein,muscle,lean mass,nutrition,meal plan,weight loss,appetite` (95)
+`semaglutide,tirzepatide,weight loss,nutrition,macros,appetite,nausea,injection,dose,tracker` (91)
+
+No repeats of title/subtitle words (glp1, protein, muscle, fat already covered).
 
 No competitor brand names. Drug generic names only — brand names (Wegovy, Ozempic,
 Mounjaro, Zepbound) stay out of keywords; where they appear in the description use

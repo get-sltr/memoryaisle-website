@@ -1,4 +1,4 @@
-/* MemoryAisle — atmospheric firefly canvas with cursor parallax */
+/* Nourished by Mira — atmospheric firefly canvas with cursor parallax */
 (function () {
   const canvas = document.querySelector('.bg-fireflies');
   if (!canvas || !canvas.getContext) return;

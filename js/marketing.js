@@ -1,4 +1,4 @@
-/* MemoryAisle — App Store URLs, campaign tags, and deep-link helpers */
+/* Nourished by Mira — App Store URLs, campaign tags, and deep-link helpers */
 (function (global) {
   var APP_ID = '6761938171';
   var PT = '128439453';
@@ -50,12 +50,12 @@
     return sanitizeCt(parts.join('-'));
   }
 
-  /** Short link for social posts: memoryaisle.app/go/fb-launch
+  /** Short link for social posts: nourishedbymira.com/go/fb-launch
    *  Never put a medication name in a campaign slug — it ends up in
    *  URLs, server logs, and attribution reports tied to a user. */
   function goUrl(slug, extraQuery) {
     var token = sanitizeCampaignToken(slug);
-    var url = 'https://memoryaisle.app/go/' + token;
+    var url = 'https://nourishedbymira.com/go/' + token;
     if (!extraQuery) return url;
     var q = typeof extraQuery === 'string' ? extraQuery : Object.keys(extraQuery).map(function (k) {
       return encodeURIComponent(k) + '=' + encodeURIComponent(extraQuery[k]);

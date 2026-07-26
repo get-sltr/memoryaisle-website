@@ -1,4 +1,4 @@
-/* MemoryAisle — live App Store ratings & reviews via Apple's public iTunes RSS feed */
+/* Nourished by Mira — live App Store ratings & reviews via Apple's public iTunes RSS feed */
 (function (global) {
   var APP_ID = '6761938171';
   var RSS_URL = 'https://itunes.apple.com/us/rss/customerreviews/id=' + APP_ID + '/sortBy=mostRecent/json';

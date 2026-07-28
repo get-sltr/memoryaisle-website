@@ -48,7 +48,7 @@
 
   function renderSummary(el, reviews) {
     if (!reviews.length) {
-      el.innerHTML = '<p class="reviews-empty">Reviews on the App Store</p>';
+      el.innerHTML = '<p class="reviews-empty"><a href="https://apps.apple.com/us/app/id' + APP_ID + '?see-all=reviews" target="_blank" rel="noopener">See reviews on the App Store &rarr;</a></p>';
       return;
     }
     var sum = reviews.reduce(function (acc, r) { return acc + r.rating; }, 0);

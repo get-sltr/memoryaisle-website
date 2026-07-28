@@ -643,3 +643,11 @@ section { padding: 88px 0; position: relative; }
   .reviews-grid { grid-template-columns: 1fr; }
   .cols { grid-template-columns: 1fr; }
 }
+
+/* === Solidify display headings (were font-weight 300 — too thin/spindly) === */
+.hero h1, .hero h1 em,
+.page-head h1, .page-head h1 em,
+.section-title, .section-title em,
+.cta-title, .cta-title em,
+h1, h2 { font-weight: 500; }
+.reviews-empty { text-align: center; margin: 8px 0 24px; }

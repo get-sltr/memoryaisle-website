@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-itunes-app" content="app-id=6761938171">
+  <title>Data Policy - Nourished by Mira</title>
+  <meta name="description" content="How Nourished by Mira classifies, encrypts, and retains each category of health data, and which sub-processors touch it.">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .legal-body { padding: 8px 0 64px; }
+    .prose .highlight {
+      background: rgba(245,217,122,0.06);
+      border-left: 3px solid var(--gold);
+      padding: 20px 24px;
+      border-radius: 0 10px 10px 0;
+      margin: 28px 0;
+    }
+    .prose .highlight p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <canvas class="bg-fireflies" aria-hidden="true"></canvas>
+
+  <nav class="site-nav wrap">
+    <div class="row">
+      <a href="/" class="brand">Nourished by Mira</a>
+      <a href="/" class="back-link">&lsaquo; Back</a>
+    </div>
+  </nav>
+
+  <header class="page-head wrap wrap-narrow">
+    <span class="marker">Legal</span>
+    <h1>Data <em>Policy</em>.</h1>
+    <p class="meta" style="text-align:center;margin-top:8px;">Last updated: August 8, 2026 &middot; Effective: August 8, 2026</p>
+  </header>
+
+  <article class="prose legal-body wrap wrap-prose">
+
+    <p>This Data Policy sits alongside our <a href="/privacy">Privacy Policy</a> and describes, category by category, where your data lives, how it is encrypted, and how long we keep it. Where the two documents overlap, the Privacy Policy governs.</p>
+
+    <h2>1. Data Processing Addendum</h2>
+
+    <h3>1.1 Health Data Classification</h3>
+    <p>Nourished by Mira processes the following categories of health-related data. Categories marked device-only never reach our infrastructure. Categories that do reach our infrastructure are always encrypted in transit; encryption at rest is applied per category as listed below.</p>
+
+    <h3>Medication brand name and exact dose (as you record it)</h3>
+    <ul>
+      <li>Sensitivity Level: HIGH</li>
+      <li>Never transmitted. This stays on your device.</li>
+      <li>Encryption: Encrypted at rest on device by iOS</li>
+      <li>Retention: Until you change or delete it, or delete the app</li>
+    </ul>
+
+    <h3>Anonymized medication class and dose tier</h3>
+    <ul>
+      <li>Sensitivity Level: HIGH</li>
+      <li>Transmitted only if Backup is enabled, as part of your profile, and to the AI service as described in the Privacy Policy</li>
+      <li>Encryption: Encrypted at rest with a customer-managed key, encrypted in transit</li>
+      <li>Retention: Duration of account + 30 days</li>
+    </ul>
+
+    <h3>Symptom logs</h3>
+    <ul>
+      <li>Sensitivity Level: HIGH</li>
+      <li>Transmitted only if Backup is enabled</li>
+      <li>Encryption: Encrypted at rest with a customer-managed key, encrypted in transit</li>
+      <li>Retention: Duration of account + 30 days</li>
+    </ul>
+
+    <h3>Body weight and composition</h3>
+    <ul>
+      <li>Sensitivity Level: MEDIUM</li>
+      <li>Encryption: Encrypted at rest on device by iOS</li>
+      <li>Retention: Device-only; body composition records are never transmitted. Current weight and goal weight are part of your profile and are transmitted only if Backup is enabled.</li>
+    </ul>
+
+    <h3>Nutrition logs (meals, macros, hydration)</h3>
+    <ul>
+      <li>Sensitivity Level: MEDIUM</li>
+      <li>Transmitted only if Backup is enabled</li>
+      <li>Encryption: Encrypted in transit. Stored without an additional layer of encryption at rest.</li>
+      <li>Retention: Duration of account + 30 days</li>
+    </ul>
+
+    <h3>Pantry items</h3>
+    <ul>
+      <li>Sensitivity Level: LOW</li>
+      <li>Transmitted only if Backup is enabled</li>
+      <li>Encryption: Encrypted in transit. Stored without an additional layer of encryption at rest.</li>
+      <li>Retention: Duration of account + 30 days</li>
+    </ul>
+
+    <h3>Dietary preferences and nutritional targets</h3>
+    <ul>
+      <li>Sensitivity Level: LOW</li>
+      <li>Transmitted only if Backup is enabled, as part of your profile</li>
+      <li>Encryption: Encrypted at rest with a customer-managed key, encrypted in transit</li>
+      <li>Retention: Duration of account + 30 days</li>
+    </ul>
+
+    <h3>Barcode scan history</h3>
+    <ul>
+      <li>Sensitivity Level: LOW</li>
+      <li>Encryption: Encrypted at rest on device by iOS</li>
+      <li>Retention: 30 days, device-only</li>
+    </ul>
+
+    <h3>1.2 Sub-processors</h3>
+    <p>We rely on the following categories of third-party services. Where a provider is identified by name in our Privacy Policy, it is named here as well.</p>
+
+    <h3>Backend infrastructure and authentication provider</h3>
+    <ul>
+      <li>Purpose: Hosting, encrypted storage, authentication (Amazon Cognito), and secure API endpoints</li>
+      <li>Data Accessed: Server-side backup data (encrypted), account email for sign-in</li>
+    </ul>
+
+    <h3>AI model service</h3>
+    <ul>
+      <li>Purpose: Powering Mira's nutritional guidance and meal generation</li>
+      <li>Data Accessed: the context listed in section 1.6 of the Privacy Policy, your typed messages, and any free text you wrote in the goal and movement fields. Never your name, email, medication brand, or exact dose.</li>
+    </ul>
+
+    <h3>Nutrition database provider (Open Food Facts)</h3>
+    <ul>
+      <li>Purpose: Food name and barcode lookups</li>
+      <li>Data Accessed: Food names and barcodes only (no user identity)</li>
+    </ul>
+
+    <h3>Apple (App Store and HealthKit)</h3>
+    <ul>
+      <li>Purpose: Subscription payment processing; health data integration</li>
+      <li>Data Accessed: Payment details are handled entirely by Apple and never reach us. Apple HealthKit data stays on-device. Reads: weight, lean body mass, body fat percentage. Writes: dietary energy consumed, dietary protein.</li>
+    </ul>
+
+    <h3>1.3 Apple App Store Requirements</h3>
+    <p>Per Apple's Health &amp; Fitness app requirements:</p>
+    <ul>
+      <li>Health and fitness data collected through the App is never used for advertising</li>
+      <li>Health and fitness data is never sold to data brokers</li>
+      <li>Apple HealthKit data is never stored in any cross-device sync service</li>
+      <li>We do not write false or inaccurate data to Apple HealthKit</li>
+      <li>Users can revoke Apple HealthKit access at any time through iOS Settings</li>
+    </ul>
+    <p>Per Apple's Spring 2026 Medical Device Disclosure requirement:</p>
+    <ul>
+      <li>Nourished by Mira is declared as NOT a regulated medical device in any jurisdiction</li>
+      <li>The App does not function as a Software as a Medical Device (SaMD)</li>
+      <li>The App does not perform clinical diagnostic, monitoring, or therapeutic functions</li>
+    </ul>
+
+    <h2>2. Acceptable Use Policy</h2>
+
+    <h3>2.1 Prohibited Uses</h3>
+    <p>You agree not to use the App to:</p>
+    <ul>
+      <li>Provide or solicit medical advice to or from other users</li>
+      <li>Misrepresent yourself as a healthcare provider, registered dietitian, or medical professional</li>
+      <li>Use the App as a substitute for professional medical care</li>
+      <li>Attempt to reverse-engineer, decompile, or extract source code from the App</li>
+      <li>Use the App in any manner that could interfere with, disrupt, or negatively affect the App or its servers</li>
+      <li>Use automated scripts, bots, or scrapers to access the App</li>
+      <li>Collect or harvest personal information of other users</li>
+      <li>Resell, redistribute, or commercially exploit any content from the App</li>
+    </ul>
+
+    <h2>3. Website Cookies</h2>
+
+    <h3>3.1 Website (nourishedbymira.com)</h3>
+    <p>If you visit our website, we use only essential cookies required for website functionality (such as session management and authentication). We do NOT use:</p>
+    <ul>
+      <li>Advertising or targeting cookies</li>
+      <li>Third-party tracking pixels</li>
+      <li>Cross-site tracking technologies</li>
+      <li>Third-party analytics services that track individual users</li>
+    </ul>
+
+    <h2>4. Contact</h2>
+    <p>SLTR Digital LLC<br>Los Angeles, California<br>privacy@nourishedbymira.com</p>
+
+  </article>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <svg class="star" width="14" height="14" viewBox="0 0 22 22" aria-hidden="true">
+        <path d="M11 0 L12.5 9.5 L22 11 L12.5 12.5 L11 22 L9.5 12.5 L0 11 L9.5 9.5 Z" fill="#f5d97a" opacity="0.6"/>
+      </svg>
+      <div class="links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/security">Security</a>
+        <a href="/support">Support</a>
+        <a href="/delete-account">Delete Account</a>
+      </div>
+      <div class="colophon">SLTR Digital LLC &middot; Los Angeles &middot; nourishedbymira.com</div>
+    </div>
+  </footer>
+
+  <script src="/js/analytics.js"></script>
+  <script src="/js/fireflies.js"></script>
+</body>
+</html>

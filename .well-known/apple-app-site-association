@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["C6RNG52SMC.com.sltrdigital.MemoryAisle2"],
+        "appIDs": ["A2RL4W62BR.com.sltrdigital.MemoryAisle2"],
         "components": [
           { "/": "/", "exclude": true },
           { "/": "/privacy", "exclude": true },
@@ -36,6 +36,6 @@
     ]
   },
   "webcredentials": {
-    "apps": ["C6RNG52SMC.com.sltrdigital.MemoryAisle2"]
+    "apps": ["A2RL4W62BR.com.sltrdigital.MemoryAisle2"]
   }
 }

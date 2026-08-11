@@ -9,7 +9,7 @@ Static marketing site for the MemoryAisle iOS app, served at memoryaisle.app. Pu
 iOS app identifiers (referenced from this repo):
 - App Store ID: `6761938171`
 - Bundle ID: `com.sltrdigital.MemoryAisle2`
-- Apple Team ID: `C6RNG52SMC`
+- Apple Team ID: `A2RL4W62BR` — this is the value the app is signed with (the signing certificate's OU, and `DEVELOPMENT_TEAM` in the Xcode project). `C6RNG52SMC` is Kevin's personal developer identifier, which appears in the certificate's common name and is easy to mistake for the team. It was wrong here until 2026-08-11, and the mistake reached `.well-known/apple-app-site-association`, where a wrong prefix breaks universal links and password AutoFill silently.
 
 ## Hosting and URL rewriting
 

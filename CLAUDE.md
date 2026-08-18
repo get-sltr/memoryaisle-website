@@ -4,7 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Static marketing site for the MemoryAisle iOS app, served at memoryaisle.app. Pure HTML/CSS/JS — no build step, no package.json, no tests. Edit a file, commit, push.
+Static marketing site for the MemoryAisle iOS app (now branded **Nourished by Mira**), served at **nourishedbymira.com**. `memoryaisle.app` is the legacy domain and 301s to it — it is still live and still carries the `@memoryaisle.app` Email Routing MX records, so do not delete that zone casually.
+
+Pure HTML/CSS/JS — no bundler, no package.json, no tests. But there **is** a required pre-deploy step: `scripts/stage-assets.sh` builds the gitignored `.wrangler-assets/` directory that `wrangler.toml` points at. Deploy with `./deploy.sh`, which runs staging and then `wrangler deploy`.
+
+Committing and pushing alone does **not** deploy. See `docs/website-deploy-runbook.md` in the iOS repo for the Cloudflare build configuration this requires.
 
 iOS app identifiers (referenced from this repo):
 - App Store ID: `6761938171`

@@ -46,6 +46,14 @@
     .brand {
       font-size: 18px; font-weight: 400; letter-spacing: 0.04em;
       color: #fff; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.5em;
+    }
+    .brand::before {
+      content: ""; flex: none;
+      width: 0.95em; height: 1.34em;
+      background: linear-gradient(168deg, #fbe9a8 0%, #f5d97a 45%, #d9ab43 100%);
+      -webkit-mask: url("/images/sprout-mark.png") no-repeat center / contain;
+              mask: url("/images/sprout-mark.png") no-repeat center / contain;
     }
     .back-link {
       font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
